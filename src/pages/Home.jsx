@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../components/Footer";
 import About from "../components/Home/About";
+import CtaContactSection from "../components/Home/CtaContactSection";
 import Hero from "../components/Home/HeroSection";
 
 const Home = () => {
@@ -8,6 +8,7 @@ const Home = () => {
     <div>
       <Hero />
       <About />
+      <CtaContactSection />
     </div>
   );
 };
