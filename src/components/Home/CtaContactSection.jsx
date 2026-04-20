@@ -144,25 +144,7 @@ export default function CtaContactSection() {
         </div>
 
         {/* animations */}
-        <style>{`
-          @keyframes textReveal {
-            0% { opacity:0; transform: translateY(120%); }
-            100% { opacity:1; transform: translateY(0); }
-          }
-
-          @keyframes fadeUp {
-            0% { opacity:0; transform: translateY(20px); }
-            100% { opacity:1; transform: translateY(0); }
-          }
-
-          .animate-textReveal {
-            animation: textReveal 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
-          }
-
-          .animate-fadeUp {
-            animation: fadeUp 0.8s ease forwards;
-          }
-        `}</style>
+     
       </div>
     </section>
   );
