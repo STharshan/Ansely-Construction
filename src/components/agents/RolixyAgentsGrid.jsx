@@ -2,7 +2,7 @@ import { Sparkles } from "lucide-react";
 
 export default function RolixyAgentsGrid({ agents }) {
   return (
-    <section className="bg-white px-4 pb-16 pt-10 sm:px-8 lg:pb-24 lg:pt-14">
+    <section className="bg-white px-4 pb-16 pt-10 sm:px-8 lg:pb-24 lg:pt-26">
       <div className="mx-auto max-w-[1320px]">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#f1e9e2] px-4 py-2 text-[14px] font-semibold text-[#3b1107]">
