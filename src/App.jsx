@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import AgentProfilePage from "./pages/AgentProfilePage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import RolixyAgentsPage from "./pages/RolixyAgentsPage";
-
+import Footer from "./components/Footer";
 
   function App() {
   return (
@@ -16,6 +16,7 @@ import RolixyAgentsPage from "./pages/RolixyAgentsPage";
         <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
            <Route path="/rolixy-agents" element={<RolixyAgentsPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
