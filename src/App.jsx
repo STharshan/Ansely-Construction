@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AgentProfilePage from "./pages/AgentProfilePage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
-
+import RolixyAgentsPage from "./pages/RolixyAgentsPage";
 
 
   function App() {
@@ -14,6 +14,7 @@ import ProjectDetailsPage from "./pages/ProjectDetailsPage";
         <Route path="/" element={<Home />} /> 
           <Route path="/agents/:slug" element={<AgentProfilePage />} />
         <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
+           <Route path="/rolixy-agents" element={<RolixyAgentsPage />} />
       </Routes>
     </Router>
   );
