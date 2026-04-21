@@ -19,7 +19,7 @@ export default function AgentHero({ profileCard, about, experience }) {
   };
 
   return (
-    <section className="bg-[#efeff2] px-4 py-16 sm:px-10 sm:py-14 lg:px-32 lg:py-24">
+    <section className="bg-[#efeff2] px-4 py-16 sm:px-10 sm:py-14 lg:px-32 lg:py-36">
       <div className="mx-auto grid max-w-[1460px] gap-8 sm:gap-12 lg:grid-cols-[500px_minmax(0,1fr)] lg:items-start lg:gap-16">
         <aside className="relative overflow-hidden rounded-[20px] border border-[#e4e4e8] bg-[#f2f2f4] shadow-[0_10px_26px_rgba(16,24,40,0.06)] sm:rounded-[24px]">
           <div className="relative z-0 h-[96px] sm:h-[150px]">
