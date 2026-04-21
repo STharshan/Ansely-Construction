@@ -11,10 +11,10 @@ export default function CtaPanel({ ctaCards }) {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="text-[2rem] font-semibold tracking-[-0.05em] text-[#161821] sm:text-[2.2rem]">
+                <h3 className="text-[32px] font-semibold tracking-[-0.05em] text-[#161821] sm:text-[35px]">
                   {card.title}
                 </h3>
-                <p className="mt-5 max-w-lg text-[1.05rem] leading-[1.55] text-[#4b4e59] sm:text-[1.1rem]">
+                <p className="mt-5 max-w-lg text-[17px] leading-[1.55] text-[#4b4e59] sm:text-[18px]">
                   {card.description}
                 </p>
               </div>
