@@ -95,7 +95,7 @@ export default function About() {
 
     return (
         <section className="bg-[#f3f1eb] py-12 lg:py-16">
-            <div className="mx-auto max-w-7xl p-4 sm:p-0">
+            <div className="mx-auto max-w-7xl p-4 lg:p-0">
                 <div className="grid gap-10 xl:grid-cols-[650px_minmax(0,1fr)]">
 
                     <div className="grid gap-8 md:grid-cols-[1fr_1fr]">

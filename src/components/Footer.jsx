@@ -45,7 +45,7 @@ export default function Footer() {
                             </p>
                         </div>
 
-                        <button className="flex h-[90px] w-[90px] items-center justify-center rounded-full bg-[#a8a556] text-lg font-semibold uppercase tracking-[-0.03em] text-white transition hover:bg-[#bbb766] sm:h-[132px] sm:w-[132px] lg:mt-[6px] lg:h-[110px] lg:w-[110px]">
+                        <button className="flex h-[90px] w-[90px] items-center justify-center rounded-full bg-[#a8a556] text-sm sm:text-lg font-semibold uppercase tracking-[-0.03em] text-white transition hover:bg-[#bbb766] sm:h-[132px] sm:w-[132px] lg:mt-[6px] lg:h-[110px] lg:w-[110px]">
                             LET&apos;S TALK
                         </button>
                     </div>

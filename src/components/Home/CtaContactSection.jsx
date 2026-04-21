@@ -17,10 +17,9 @@ export default function CtaContactSection() {
   return (
     // OUTER WHITE
     <section className="bg-white">
-      
+
       {/* INNER GREY CONTAINER */}
       <div className="relative overflow-hidden rounded-[30px] bg-white">
-       
 
         {/* blueprint image ONLY inside container */}
         <div
@@ -37,7 +36,7 @@ export default function CtaContactSection() {
         <div className="grid xl:grid-cols-[1.05fr_0.95fr] h-full">
 
           {/* LEFT */}
-          <div className="flex flex-col justify-between px-6 py-16 sm:px-10 md:px-16 xl:px-[110px] xl:py-[110px]">
+          <div className="flex flex-col justify-between px-6 py-16 sm:px-10 md:px-16 xl:px-[110px] xl:py-[50px]">
             <div>
               {/* pill */}
               <div className="inline-flex items-center gap-3 rounded-full border border-[#dcdcd6] px-6 py-3 bg-[#f4f4f1]">
@@ -142,25 +141,7 @@ export default function CtaContactSection() {
         </div>
 
         {/* animations */}
-        <style>{`
-          @keyframes textReveal {
-            0% { opacity:0; transform: translateY(120%); }
-            100% { opacity:1; transform: translateY(0); }
-          }
 
-          @keyframes fadeUp {
-            0% { opacity:0; transform: translateY(20px); }
-            100% { opacity:1; transform: translateY(0); }
-          }
-
-          .animate-textReveal {
-            animation: textReveal 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
-          }
-
-          .animate-fadeUp {
-            animation: fadeUp 0.8s ease forwards;
-          }
-        `}</style>
       </div>
     </section>
   );
