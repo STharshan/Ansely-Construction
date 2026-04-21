@@ -1,57 +1,74 @@
-export default function Hero() {
+import { ArrowUpRight } from "lucide-react";
+
+const heroImage =
+  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2000&q=80";
+const promoImage =
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80";
+
+export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      
-      {/* Background */}
-      <img
-        src="/hero.jpg"
-        alt="hero"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+    <section className="bg-[#efede7] px-3 pb-0 pt-3 sm:px-4 sm:pt-4">
+      <div className="relative overflow-hidden rounded-[26px] bg-[#202833] pb-15 text-white sm:rounded-[30px]">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(43,52,62,0.78)_0%,rgba(34,42,51,0.4)_25%,rgba(23,24,26,0.58)_62%,rgba(25,22,20,0.78)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent_38%)]" />
+        <div className="absolute inset-x-0 top-[108px] z-10 h-px bg-white/10" />
+        
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex items-center px-6 md:px-12">
-        <div className="max-w-3xl text-white">
-          
-          {/* Tag */}
-          <div className="inline-block mb-4 px-4 py-1 bg-white/10 rounded-full text-sm">
-            A Better Way To Experience Home
-          </div>
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-[linear-gradient(180deg,rgba(22,20,17,0)_0%,rgba(22,20,17,0.58)_100%)]" />
 
-          {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
-            Your Dream Apartment in the Perfect Location
-          </h1>
+        <div className="relative z-20 mx-auto flex min-h-[640px] max-w-[1380px] flex-col justify-end px-4 pb-6 pt-28 sm:px-6 sm:pb-8 md:min-h-[620px] md:px-8 lg:px-8 lg:pb-4 lg:pt-32">
+          <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_460px] xl:grid-cols-[minmax(0,1fr)_500px]">
+            <div className="max-w-[760px] pb-3 md:pb-6 lg:pb-7">
+              <div className="inline-flex mt-5 sm:mt-0 rounded-full border border-white/10 bg-[rgba(104,111,102,0.78)] px-5 py-1 text-sm font-semibold tracking-[-0.02em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] backdrop-blur-md">
+                <span className="mr-3 mt-[5px] h-2 w-2 rounded-full bg-[#b0ad58]" />
+                <span>A Better Way To Experience Home</span>
+              </div>
 
-          {/* Description */}
-          <p className="mt-4 text-sm sm:text-base text-gray-200 max-w-xl">
-            Experience contemporary apartments crafted with smart layouts,
-            premium finishes, and everyday comfort.
-          </p>
-        </div>
-      </div>
+              <h1 className="mt-6 max-w-[700px] text-[3rem] font-semibold leading-[0.96] tracking-[-0.06em] text-white sm:text-[3.9rem]">
+                Your Dream Apartment in the Perfect Location
+              </h1>
 
-      {/* Floating Card */}
-      <div className="absolute bottom-6 right-6 md:bottom-10 md:right-12 z-10 w-[90%] sm:w-[350px] bg-white/10 backdrop-blur-lg rounded-2xl p-4 text-white">
-        <div className="flex gap-4">
-          
-          <img
-            src="/card.jpg"
-            alt="home"
-            className="w-24 h-24 object-cover rounded-lg"
-          />
+              <p className="mt-6 max-w-[910px] text-base leading-6 font-semibold text-white/90 sm:text-lg lg:max-w-[790px] lg:text-[1.03rem]">
+                Experience contemporary apartments crafted with smart layouts,
+                premium finishes, and everyday comfort. Perfectly located to
+                keep you connected to everything that matters.
+              </p>
+            </div>
 
-          <div>
-            <p className="text-sm text-gray-200">
-              “Find your perfect home designed for comfort, style, and everyday living”
-            </p>
+            <div className="w-full lg:mb-[14px] lg:justify-self-end">
+              <div className="rounded-[28px] border border-white/10 bg-[rgba(111,106,95,0.88)] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:p-5">
+                <div className="flex flex-col gap-5 sm:flex-row">
+                  <div className="overflow-hidden rounded-[18px] sm:w-[204px] sm:min-w-[204px]">
+                    <img
+                      src={promoImage}
+                      alt="Townhouse exterior"
+                      className="h-[190px] w-full object-cover"
+                    />
+                  </div>
 
-            <button className="text-lime-400 text-sm mt-2">
-              Bok A Home →
-            </button>
+                  <div className="flex flex-1 flex-col justify-between gap-4 pt-1">
+                    <p className="max-w-[220px] text-[1.05rem] font-semibold leading-[1.85] text-white ">
+                      &ldquo;Find your perfect home designed for comfort, style,
+                      and everyday living&rdquo;
+                    </p>
+
+                    <div className="border-t border-white/10 pt-6">
+                      <button className="inline-flex items-center gap-3 text-[1.05rem] font-semibold text-white transition hover:text-[#d7d06f]">
+                        Bok A Home
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#b0ad58] text-[#292724]">
+                          <ArrowUpRight size={17} />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

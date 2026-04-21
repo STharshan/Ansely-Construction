@@ -15,14 +15,11 @@ const headingWords = [
 
 export default function CtaContactSection() {
   return (
-    // ✅ OUTER WHITE
-    <section className="bg-white px-4 py-6 md:px-6 md:py-8">
-      
-      {/* ✅ INNER GREY CONTAINER */}
-      <div className="relative overflow-hidden rounded-[30px] bg-white min-h-[760px]">
+    // OUTER WHITE
+    <section className="bg-white">
 
-        {/* small olive dot */}
-       
+      {/* INNER GREY CONTAINER */}
+      <div className="relative overflow-hidden rounded-[30px] bg-white">
 
         {/* blueprint image ONLY inside container */}
         <div
@@ -39,7 +36,7 @@ export default function CtaContactSection() {
         <div className="grid xl:grid-cols-[1.05fr_0.95fr] h-full">
 
           {/* LEFT */}
-          <div className="flex flex-col justify-between px-6 py-16 sm:px-10 md:px-16 xl:px-[110px] xl:py-[110px]">
+          <div className="flex flex-col justify-between px-6 py-16 sm:px-10 md:px-16 xl:px-[110px] xl:py-[50px]">
             <div>
               {/* pill */}
               <div className="inline-flex items-center gap-3 rounded-full border border-[#dcdcd6] px-6 py-3 bg-[#f4f4f1]">
@@ -112,7 +109,7 @@ export default function CtaContactSection() {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="flex items-center justify-center px-6 py-10">
+          <div className="flex items-center justify-center px-4 py-10">
             <div className="w-full max-w-[720px] rounded-[26px] bg-[#e3e3de] px-8 py-10">
 
               <h3 className="text-[34px] font-medium text-[#111]">
@@ -144,7 +141,7 @@ export default function CtaContactSection() {
         </div>
 
         {/* animations */}
-     
+
       </div>
     </section>
   );

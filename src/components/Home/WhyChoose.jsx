@@ -39,7 +39,7 @@ export default function WhyChoose() {
           backgroundSize: "78px 78px, 78px 78px, cover",
         }}
       >
-        <div className="mx-auto max-w-[1360px]">
+        <div className="mx-auto max-w-[1360px] p-6">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90">
               <span className="h-2 w-2 rounded-full bg-[#a6a04a]" />
@@ -57,7 +57,7 @@ export default function WhyChoose() {
               ))}
             </div>
 
-            <div className="relative mx-auto flex w-full max-w-[640px] items-end justify-center lg:w-[640px]">
+            <div className="relative mx-auto flex w-full max-w-[640px] items-end justify-center ]">
               <img
                 src="https://html.awaikenthemes.com/antila/images/why-choose-image-prime.png"
                 alt="Modern apartment building"
