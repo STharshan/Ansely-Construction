@@ -10,8 +10,8 @@ const specIconMap = {
 
 export default function ListingGrid({ section }) {
   return (
-    <section className="bg-[#f7f7f4] px-5 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-20">
-      <div className="mx-auto max-w-[1720px] rounded-[36px] bg-[#171922] px-6 py-10 text-white sm:px-10 sm:py-14 lg:px-20 lg:py-24">
+    <section className="bg-[#f7f7f4] px-0 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-20">
+      <div className="mx-auto w-full rounded-[0px] bg-[#171922] px-4 py-10 text-white sm:max-w-[1720px] sm:rounded-[36px] sm:px-10 sm:py-14 lg:px-20 lg:py-24">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="inline-flex items-center gap-3 rounded-full bg-white/6 px-4 py-2.5 text-[15px] font-medium text-white">
@@ -20,12 +20,12 @@ export default function ListingGrid({ section }) {
               </span>
               {section.eyebrow}
             </div>
-            <h2 className="mt-8 max-w-5xl text-[44px] font-semibold tracking-[-0.03em] text-white sm:text-[58px]">
+            <h2 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.18] tracking-[-0.03em] text-white sm:text-[58px] sm:leading-[1.08]">
               {section.title}
             </h2>
           </div>
 
-          <button className="inline-flex items-center gap-2.5 self-start text-[16px] font-medium text-white/95 transition hover:text-white lg:self-auto">
+          <button className="inline-flex items-center gap-2.5 self-start text-[14px] font-medium text-white/95 transition hover:text-white sm:text-[16px] lg:self-auto">
             {section.actionLabel}
             <ArrowRight size={18} />
           </button>
@@ -40,7 +40,7 @@ export default function ListingGrid({ section }) {
                   alt={item.title}
                   className="h-[260px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.045] sm:h-[340px]"
                 />
-                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-[#171922] px-4 py-2 text-[15px] font-semibold text-white">
+                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-[#171922] px-4 py-2 text-[13px] font-semibold text-white sm:text-[15px]">
                   <Home size={14} />
                   {item.type}
                 </div>
@@ -48,10 +48,10 @@ export default function ListingGrid({ section }) {
                   <Plus size={22} />
                 </button>
               </div>
-              <h3 className="mt-5 text-[24px] font-semibold tracking-[-0.03em] text-white sm:text-[24px]">
+              <h3 className="mt-5 text-[20px] font-semibold leading-[1.28] tracking-[-0.03em] text-white sm:text-[24px] sm:leading-[1.18]">
                 {item.title}
               </h3>
-              <div className="mt-2.5 flex items-center gap-2.5 text-[17px] text-white/90">
+              <div className="mt-2.5 flex items-center gap-2.5 text-[15px] leading-[1.4] text-white/90 sm:text-[17px]">
                 <MapPin size={17} />
                 <span>{item.location}</span>
               </div>
@@ -68,13 +68,13 @@ export default function ListingGrid({ section }) {
                         ) : (
                           <Home size={16} />
                         )}
-                        <span className="text-[16px] font-medium">{spec.label}</span>
+                        <span className="text-[14px] font-medium leading-[1.3] sm:text-[16px]">{spec.label}</span>
                       </div>
                     );
                   })}
                 </div>
 
-                <button className="inline-flex items-center gap-2.5 text-[16px] font-medium text-white transition hover:text-white/80">
+                <button className="inline-flex items-center gap-2.5 text-[14px] font-medium leading-[1.3] text-white transition hover:text-white/80 sm:text-[16px]">
                   {item.ctaLabel}
                   <ArrowRight size={16} />
                 </button>
