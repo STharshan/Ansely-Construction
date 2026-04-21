@@ -7,7 +7,7 @@ export const projects = [
       description:
         "A flexible modular home designed for a growing family, featuring expandable layouts and high-performance insulation.",
       image:
-        "https://cdn.prod.website-files.com/693e9d1043906400d3af5749/69496fe442735f6fd15d4b2f_2151264449.jpg",
+        "https://cdn.prod.website-files.com/693e9d1043906400d3af5749/6942cb0780d9d12045abb0b6_2151302617.jpg",
     },
     overview: {
       label: "Project overview",

@@ -3,95 +3,106 @@ import ProjectReveal from "./ProjectReveal";
 function FormLine({ label }) {
   return (
     <label className="block">
-      <span className="text-sm font-semibold uppercase tracking-[-0.03em] text-white/85">
+      <span className="text-[0.95rem] font-semibold uppercase tracking-[-0.03em] text-white/85">
         {label}
       </span>
-      <div className="mt-4 h-12 border-b border-white/20" />
+      <div className="mt-5 h-11 border-b border-white/20" />
     </label>
   );
 }
 
 export default function ProjectFooter({ footer }) {
   return (
-    <footer className="bg-[#15130d] px-5 pb-10 pt-20 text-white sm:px-8 lg:px-10 lg:pt-24">
-      <div className="mx-auto max-w-[1680px]">
-        <ProjectReveal>
-          <div className="grid gap-8 lg:grid-cols-[300px_minmax(0,1fr)] lg:items-start">
-            <div>
-              <p className="text-[2.5rem] font-semibold uppercase leading-[0.92] tracking-[-0.07em] text-white sm:text-[3.2rem] lg:text-[4.2rem]">
-                {footer.eyebrow}
-              </p>
-              <button className="mt-8 inline-flex min-h-14 items-center gap-3 rounded-full bg-white px-7 text-[0.9rem] font-semibold uppercase text-[#15130d] transition hover:bg-[#f2ede5]">
-                <span className="h-4 w-4 rounded-full bg-[#15130d]" />
-                {footer.ctaLabel}
-              </button>
-            </div>
-
-            <div className="lg:pt-6">
-              <h2 className="max-w-4xl text-[2.8rem] font-semibold uppercase leading-[0.95] tracking-[-0.07em] text-white sm:text-[3.6rem] lg:text-[4.8rem]">
-                {footer.title}
-              </h2>
-            </div>
-          </div>
-        </ProjectReveal>
-
-        <ProjectReveal delay={120}>
-          <div className="mt-16 grid gap-8 lg:grid-cols-[1fr_320px] lg:items-start">
-            <h3 className="max-w-3xl text-[2.25rem] font-semibold uppercase leading-[0.96] tracking-[-0.06em] sm:text-[3rem] lg:text-[3.75rem]">
-              {footer.statement}
-            </h3>
-            <div className="space-y-2 text-right text-[1rem] font-semibold leading-8">
-              <p>{footer.location}</p>
-              <p>{footer.phone}</p>
-              <p>{footer.email}</p>
-            </div>
-          </div>
-        </ProjectReveal>
-
-        <ProjectReveal delay={180}>
-          <div className="mt-16 grid gap-12 border-b border-white/15 pb-14 lg:grid-cols-[220px_200px_minmax(0,1fr)]">
-            <div className="space-y-3 text-[0.95rem] font-semibold uppercase leading-8">
-              {footer.navLinks.map((item) => (
-                <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
-                  {item}
-                </a>
-              ))}
-            </div>
-
-            <div className="space-y-3 text-[0.95rem] font-semibold uppercase leading-8">
-              {footer.socialLinks.map((item) => (
-                <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
-                  {item}
-                </a>
-              ))}
-            </div>
-
-            <form className="grid gap-8 lg:grid-cols-2">
-              <FormLine label={footer.form.firstName} />
-              <FormLine label={footer.form.lastName} />
-              <FormLine label={footer.form.phone} />
-              <FormLine label={footer.form.email} />
-              <div className="lg:col-span-2">
-                <FormLine label={footer.form.message} />
-              </div>
-              <div className="lg:col-span-2">
-                <button
-                  type="button"
-                  className="inline-flex min-h-14 items-center gap-3 rounded-full bg-white px-7 text-[0.9rem] font-semibold uppercase text-[#15130d]"
-                >
-                  <span className="h-4 w-4 rounded-full bg-[#15130d]" />
-                  {footer.form.submitLabel}
+    <footer className="bg-[#15130d] text-white">
+      <section className="bg-[#fbfaf7] px-5 pb-20 pt-16 text-[#12100b] sm:px-8 lg:px-10 lg:pb-24 lg:pt-20">
+        <div className="mx-auto max-w-[1680px]">
+          <ProjectReveal>
+            <div className="grid gap-10 lg:grid-cols-[360px_minmax(0,1fr)] lg:items-end">
+              <div>
+                <p className="text-[3.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[4.6rem] lg:text-[5.8rem]">
+                  {footer.eyebrow}
+                </p>
+                <button className="mt-10 inline-flex min-h-16 items-center gap-4 rounded-full bg-[#12100b] px-9 text-[1rem] font-semibold uppercase text-white transition hover:bg-[#252019]">
+                  <span className="h-4 w-4 rounded-full bg-white" />
+                  {footer.ctaLabel}
                 </button>
               </div>
-            </form>
-          </div>
-        </ProjectReveal>
 
-        <div className="flex flex-col gap-4 pt-10 text-[1rem] text-white/80 lg:flex-row lg:items-center lg:justify-between">
-          <p>{footer.legal}</p>
-          <p>{footer.credits}</p>
+              <div className="lg:pb-1">
+                <h2 className="text-[3.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[4.6rem] lg:text-[5.8rem]">
+                  {footer.title}
+                </h2>
+              </div>
+            </div>
+          </ProjectReveal>
         </div>
-      </div>
+      </section>
+
+      <section className="px-5 pb-8 pt-[4.5rem] sm:px-8 lg:px-10 lg:pt-20">
+        <div className="mx-auto max-w-[1680px]">
+          <ProjectReveal>
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_460px] lg:items-start">
+              <h3 className="max-w-[7ch] text-[3rem] font-semibold uppercase leading-[0.98] tracking-[-0.07em] sm:text-[4rem] lg:text-[4.9rem]">
+                {footer.statement}
+              </h3>
+              <div className="space-y-3 text-left text-[1.35rem] font-semibold leading-[1.7] lg:text-right">
+                <p>{footer.location}</p>
+                <p>{footer.phone}</p>
+                <p>{footer.email}</p>
+              </div>
+            </div>
+          </ProjectReveal>
+
+          <ProjectReveal delay={140}>
+            <div className="mt-20 grid gap-16 border-b border-white/15 pb-16 lg:grid-cols-[220px_220px_minmax(0,1fr)]">
+              <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
+                {footer.navLinks.map((item) => (
+                  <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
+                    {item}
+                  </a>
+                ))}
+              </div>
+
+              <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
+                {footer.socialLinks.map((item) => (
+                  <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
+                    {item}
+                  </a>
+                ))}
+              </div>
+
+              <form className="grid gap-10 lg:grid-cols-2 lg:pl-10">
+                <FormLine label={footer.form.firstName} />
+                <FormLine label={footer.form.lastName} />
+                <FormLine label={footer.form.phone} />
+                <FormLine label={footer.form.email} />
+                <div className="lg:col-span-2">
+                  <label className="block">
+                    <span className="text-[0.95rem] font-semibold uppercase tracking-[-0.03em] text-white/85">
+                      {footer.form.message}
+                    </span>
+                    <textarea className="mt-5 min-h-[3.5rem] w-full resize-none border-b border-white/20 bg-transparent text-white outline-none" />
+                  </label>
+                </div>
+                <div className="lg:col-span-2">
+                  <button
+                    type="button"
+                    className="inline-flex min-h-16 items-center gap-4 rounded-full bg-white px-9 text-[1rem] font-semibold uppercase text-[#15130d]"
+                  >
+                    <span className="h-4 w-4 rounded-full bg-[#15130d]" />
+                    {footer.form.submitLabel}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ProjectReveal>
+
+          <div className="flex flex-col gap-4 pt-8 text-[0.95rem] text-white/80 lg:flex-row lg:items-center lg:justify-between">
+            <p>{footer.legal}</p>
+            <p>{footer.credits}</p>
+          </div>
+        </div>
+      </section>
     </footer>
   );
 }

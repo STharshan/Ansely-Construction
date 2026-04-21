@@ -47,7 +47,7 @@ export default function RelatedProjects({ relatedProjects }) {
         </div>
 
         <ProjectReveal delay={100}>
-          <div className="mt-8 overflow-hidden">
+          <div className="mt-20 overflow-hidden lg:mt-24">
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -55,39 +55,39 @@ export default function RelatedProjects({ relatedProjects }) {
               {relatedProjects.items.map((project) => (
                 <article
                   key={project.title}
-                  className="grid w-full shrink-0 gap-8 lg:grid-cols-[280px_minmax(0,1fr)_180px] lg:items-start"
+                  className="grid w-full shrink-0 gap-10 lg:grid-cols-[260px_minmax(0,1fr)_220px] lg:items-start"
                 >
-                  <div className="space-y-5 pt-2">
+                  <div className="space-y-5 pt-1">
                     <h3 className="text-[1.7rem] font-medium uppercase tracking-[-0.05em]">
                       {project.title}
                     </h3>
                     <div className="text-[0.95rem] text-[#6a7087]">
                       {project.location} - {project.year}
                     </div>
-                    <p className="max-w-sm text-[0.98rem] leading-7 text-[#6a7087]">
+                    <p className="max-w-[15rem] text-[0.98rem] leading-[1.7] text-[#6a7087]">
                       {project.description}
                     </p>
                   </div>
 
-                  <div className="relative min-h-[24rem] sm:min-h-[32rem]">
+                  <div className="relative mt-6 min-h-[26rem] sm:min-h-[34rem] lg:mt-0 lg:min-h-[39rem]">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="h-[22rem] w-[78%] rounded-[1rem] object-cover sm:h-[32rem]"
+                      className="h-[24rem] w-[76%] object-cover sm:h-[32rem] lg:h-[39rem]"
                     />
                     <img
                       src={project.accentImage}
                       alt={`${project.title} alternate view`}
-                      className="absolute bottom-0 right-0 h-[14rem] w-[58%] rounded-[1rem] object-cover shadow-[0_20px_60px_rgba(0,0,0,0.08)] sm:h-[20rem]"
+                      className="absolute bottom-[4.5rem] right-0 h-[15rem] w-[62%] object-cover shadow-[0_20px_60px_rgba(0,0,0,0.08)] sm:h-[21rem] lg:bottom-[4.75rem] lg:h-[27rem]"
                     />
                   </div>
 
-                  <div className="flex items-end lg:min-h-[32rem]">
+                  <div className="flex items-start justify-start pt-6 lg:justify-end lg:pt-[12.5rem]">
                     <Link
                       to={`/projects/${project.slug}`}
-                      className="inline-flex items-center gap-3 text-[0.95rem] font-medium uppercase text-[#ef5934]"
+                      className="inline-flex items-center gap-3 text-[0.95rem] font-medium uppercase tracking-[-0.02em] text-[#ef5934]"
                     >
-                      <span className="h-4 w-4 rounded-full bg-[#ef5934]/25 ring-4 ring-[#ef5934]/10">
+                      <span className="h-5 w-5 rounded-full bg-[#ef5934]/18 p-[0.28rem]">
                         <span className="block h-full w-full rounded-full bg-[#ef5934]" />
                       </span>
                       Learn More

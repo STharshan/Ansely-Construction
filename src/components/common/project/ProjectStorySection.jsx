@@ -2,6 +2,7 @@ import ProjectReveal from "./ProjectReveal";
 import ProjectDetailsRail from "./ProjectDetailsRail";
 
 export default function ProjectStorySection({
+  hero,
   overview,
   designApproach,
   gallery,
@@ -9,9 +10,19 @@ export default function ProjectStorySection({
   consultation,
 }) {
   return (
-    <section className="bg-[#fbfaf7] px-5 pb-24 pt-10 text-[#12100b] sm:px-8 lg:px-10 lg:pb-32">
+    <section className="bg-[#fbfaf7] px-5 pb-24 pt-8 text-[#12100b] sm:px-8 lg:px-10 lg:pb-32 lg:pt-10">
       <div className="mx-auto grid max-w-[1680px] gap-14 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,0.78fr)] lg:gap-18">
         <div className="space-y-16">
+          <ProjectReveal>
+            <div className="overflow-hidden rounded-[1.5rem]">
+              <img
+                src={hero.image}
+                alt={hero.title}
+                className="h-[24rem] w-full object-cover sm:h-[34rem] lg:h-[40rem]"
+              />
+            </div>
+          </ProjectReveal>
+
           <ProjectReveal>
             <section>
               <h2 className="text-[2.1rem] font-semibold uppercase leading-[0.95] tracking-[-0.06em] sm:text-[2.8rem] lg:text-[3.25rem]">
@@ -51,7 +62,7 @@ export default function ProjectStorySection({
           </ProjectReveal>
         </div>
 
-        <ProjectReveal delay={140}>
+        <ProjectReveal delay={140} className="lg:pt-8">
           <ProjectDetailsRail
             details={details}
             consultation={consultation}

@@ -17,6 +17,7 @@ export default function ProjectDetailsPage() {
     <main className="bg-[#fbfaf7]">
       <ProjectHero hero={project.hero} />
       <ProjectStorySection
+        hero={project.hero}
         overview={project.overview}
         designApproach={project.designApproach}
         gallery={project.gallery}
