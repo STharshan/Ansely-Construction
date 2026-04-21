@@ -12,14 +12,18 @@ function FormLine({ label }) {
 }
 
 export default function ProjectFooter({ footer }) {
+  const statementLines = footer.statement
+    .split(/(?<=\.)\s+/)
+    .filter(Boolean);
+
   return (
     <footer className="bg-[#15130d] text-white">
       <section className="bg-white px-5 pb-20 pt-16 text-[#12100b] sm:px-8 lg:px-10 lg:pb-24 lg:pt-20">
         <div className="mx-auto max-w-[1680px]">
           <ProjectReveal>
-            <div className="grid gap-10 lg:grid-cols-[360px_minmax(0,1fr)] lg:items-end">
+            <div className="grid gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:items-end">
               <div>
-                <p className="text-[3.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[4.6rem] lg:text-[5.8rem]">
+                <p className="text-[44px] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[60px] lg:text-[72px] lg:whitespace-nowrap">
                   {footer.eyebrow}
                 </p>
                 <button className="mt-10 inline-flex min-h-16 items-center gap-4 rounded-full bg-[#12100b] px-9 text-[1rem] font-semibold uppercase text-white transition hover:bg-[#252019]">
@@ -29,7 +33,7 @@ export default function ProjectFooter({ footer }) {
               </div>
 
               <div className="lg:pb-1">
-                <h2 className="text-[3.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[4.6rem] lg:text-[5.8rem]">
+                <h2 className="text-[44px] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[60px] lg:text-[72px] lg:whitespace-nowrap">
                   {footer.title}
                 </h2>
               </div>
@@ -38,12 +42,16 @@ export default function ProjectFooter({ footer }) {
         </div>
       </section>
 
-      <section className="px-5 pb-8 pt-[4.5rem] sm:px-8 lg:px-10 lg:pt-20">
+      <section className="px-5 pb-16 pt-[4.5rem] sm:px-8 lg:px-10 lg:pb-20 lg:pt-20">
         <div className="mx-auto max-w-[1680px]">
           <ProjectReveal>
             <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_460px] lg:items-start">
-              <h3 className="max-w-[7ch] text-[3rem] font-semibold uppercase leading-[0.98] tracking-[-0.07em] sm:text-[4rem] lg:text-[4.9rem]">
-                {footer.statement}
+              <h3 className="text-[42px] font-semibold uppercase leading-[0.98] tracking-[-0.07em] sm:text-[48px] lg:text-[48px]">
+                {statementLines.map((line) => (
+                  <span key={line} className="block whitespace-nowrap">
+                    {line}
+                  </span>
+                ))}
               </h3>
               <div className="space-y-3 text-left text-[1.35rem] font-semibold leading-[1.7] lg:text-right">
                 <p>{footer.location}</p>
@@ -54,24 +62,26 @@ export default function ProjectFooter({ footer }) {
           </ProjectReveal>
 
           <ProjectReveal delay={140}>
-            <div className="mt-20 grid gap-16 border-b border-white/15 pb-16 lg:grid-cols-[220px_220px_minmax(0,1fr)]">
-              <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
-                {footer.navLinks.map((item) => (
-                  <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
-                    {item}
-                  </a>
-                ))}
+            <div className="mt-20 grid gap-16 lg:grid-cols-[420px_minmax(0,1fr)] lg:gap-20">
+              <div className="grid gap-16 sm:grid-cols-2 sm:gap-14">
+                <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
+                  {footer.navLinks.map((item) => (
+                    <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
+                  {footer.socialLinks.map((item) => (
+                    <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
+                      {item}
+                    </a>
+                  ))}
+                </div>
               </div>
 
-              <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
-                {footer.socialLinks.map((item) => (
-                  <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
-                    {item}
-                  </a>
-                ))}
-              </div>
-
-              <form className="grid gap-10 lg:grid-cols-2 lg:pl-10">
+              <form className="grid gap-10 lg:grid-cols-2">
                 <FormLine label={footer.form.firstName} />
                 <FormLine label={footer.form.lastName} />
                 <FormLine label={footer.form.phone} />
@@ -97,7 +107,6 @@ export default function ProjectFooter({ footer }) {
             </div>
           </ProjectReveal>
 
-         
         </div>
       </section>
     </footer>
