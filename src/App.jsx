@@ -4,30 +4,20 @@ import Home from "./pages/Home";
 import AgentProfilePage from "./pages/AgentProfilePage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 
-function AppRoutes() {
-  const location = useLocation();
-  const hideNavbar =
-    location.pathname.startsWith("/agent/") ||
-    location.pathname.startsWith("/projects/");
 
-  return (
-    <>
-      {!hideNavbar ? <Navbar /> : null}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/agent/john-carter" element={<AgentProfilePage />} />
-        <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
-      </Routes>
-    </>
-  );
-}
 
-function App() {
+  function App() {
   return (
     <Router>
-      <AppRoutes />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+          <Route path="/agent/john-carter" element={<AgentProfilePage />} />
+        <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
+      </Routes>
     </Router>
   );
 }
+
 
 export default App;
