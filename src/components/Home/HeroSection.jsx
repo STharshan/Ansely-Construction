@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div className="relative z-20 mx-auto flex min-h-[640px] max-w-[1380px] flex-col justify-end px-4 pb-6 pt-28 sm:px-6 sm:pb-8 md:min-h-[620px] md:px-8 lg:px-8 lg:pb-4 lg:pt-32">
           <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_460px] xl:grid-cols-[minmax(0,1fr)_500px]">
             <div className="max-w-[760px] pb-3 md:pb-6 lg:pb-7">
-              <div className="inline-flex rounded-full border border-white/10 bg-[rgba(104,111,102,0.78)] px-5 py-1 text-sm font-semibold tracking-[-0.02em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] backdrop-blur-md">
+              <div className="inline-flex mt-5 sm:mt-0 rounded-full border border-white/10 bg-[rgba(104,111,102,0.78)] px-5 py-1 text-sm font-semibold tracking-[-0.02em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] backdrop-blur-md">
                 <span className="mr-3 mt-[5px] h-2 w-2 rounded-full bg-[#b0ad58]" />
                 <span>A Better Way To Experience Home</span>
               </div>

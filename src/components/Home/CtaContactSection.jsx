@@ -15,13 +15,11 @@ const headingWords = [
 
 export default function CtaContactSection() {
   return (
-    // ✅ OUTER WHITE
-    <section className="bg-white px-4 py-6 md:px-6 md:py-8">
+    // OUTER WHITE
+    <section className="bg-white">
       
-      {/* ✅ INNER GREY CONTAINER */}
-      <div className="relative overflow-hidden rounded-[30px] bg-white min-h-[760px]">
-
-        {/* small olive dot */}
+      {/* INNER GREY CONTAINER */}
+      <div className="relative overflow-hidden rounded-[30px] bg-white">
        
 
         {/* blueprint image ONLY inside container */}
@@ -112,7 +110,7 @@ export default function CtaContactSection() {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="flex items-center justify-center px-6 py-10">
+          <div className="flex items-center justify-center px-4 py-10">
             <div className="w-full max-w-[720px] rounded-[26px] bg-[#e3e3de] px-8 py-10">
 
               <h3 className="text-[34px] font-medium text-[#111]">
