@@ -10,15 +10,15 @@ export default function ProjectStorySection({
   consultation,
 }) {
   return (
-    <section className="bg-[#fbfaf7] px-5 pb-24 pt-8 text-[#12100b] sm:px-8 lg:px-10 lg:pb-32 lg:pt-10">
+    <section className="bg-white px-5 pb-24 pt-8 text-[#12100b] sm:px-8 lg:px-20 lg:pb-32 lg:pt-10">
       <div className="mx-auto grid max-w-[1680px] gap-14 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,0.78fr)] lg:gap-18">
         <div className="space-y-16">
           <ProjectReveal>
-            <div className="overflow-hidden rounded-[1.5rem]">
+            <div className="overflow-hidden ">
               <img
                 src={hero.image}
                 alt={hero.title}
-                className="h-[24rem] w-full object-cover sm:h-[34rem] lg:h-[40rem]"
+                className="h-[200px] w-full object-cover sm:h-[400px] lg:h-[400px]"
               />
             </div>
           </ProjectReveal>

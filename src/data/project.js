@@ -115,8 +115,6 @@ export const projects = [
         message: "Your Message",
         submitLabel: "Submit",
       },
-      legal: "(c) Pody. All Rights Reserved. Licensing",
-      credits: "Template by wCopilot Powered by Webflow",
     },
   },
   {
@@ -215,8 +213,6 @@ export const projects = [
         message: "Your Message",
         submitLabel: "Submit",
       },
-      legal: "(c) Pody. All Rights Reserved. Licensing",
-      credits: "Template by wCopilot Powered by Webflow",
     },
   },
   {
@@ -315,8 +311,6 @@ export const projects = [
         message: "Your Message",
         submitLabel: "Submit",
       },
-      legal: "(c) Pody. All Rights Reserved. Licensing",
-      credits: "Template by wCopilot Powered by Webflow",
     },
   },
   {
@@ -415,8 +409,6 @@ export const projects = [
         message: "Your Message",
         submitLabel: "Submit",
       },
-      legal: "(c) Pody. All Rights Reserved. Licensing",
-      credits: "Template by wCopilot Powered by Webflow",
     },
   },
 ];

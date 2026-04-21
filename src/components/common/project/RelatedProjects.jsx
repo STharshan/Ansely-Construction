@@ -16,13 +16,13 @@ export default function RelatedProjects({ relatedProjects }) {
   };
 
   return (
-    <section className="overflow-hidden bg-[#fbfaf7] px-5 py-24 text-[#12100b] sm:px-8 lg:px-10 lg:py-32">
+    <section className="overflow-hidden bg-white px-5 py-24 text-[#12100b] sm:px-8 lg:px-10 lg:py-32">
       <div className="mx-auto max-w-[1680px]">
         <ProjectReveal className="text-center">
           <p className="text-[1rem] uppercase tracking-[-0.03em] text-[#1a1812]">
             {relatedProjects.eyebrow}
           </p>
-          <h2 className="mx-auto mt-4 max-w-4xl text-[2.5rem] font-semibold uppercase leading-[0.96] tracking-[-0.07em] sm:text-[3.4rem] lg:text-[4.4rem]">
+          <h2 className="mx-auto mt-4 max-w-4xl text-[2.5rem] font-semibold uppercase leading-[0.96] tracking-[-0.07em] sm:text-[48px] lg:text-[48px]">
             {relatedProjects.title}
           </h2>
         </ProjectReveal>

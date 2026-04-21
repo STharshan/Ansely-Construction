@@ -14,7 +14,7 @@ function FormLine({ label }) {
 export default function ProjectFooter({ footer }) {
   return (
     <footer className="bg-[#15130d] text-white">
-      <section className="bg-[#fbfaf7] px-5 pb-20 pt-16 text-[#12100b] sm:px-8 lg:px-10 lg:pb-24 lg:pt-20">
+      <section className="bg-white px-5 pb-20 pt-16 text-[#12100b] sm:px-8 lg:px-10 lg:pb-24 lg:pt-20">
         <div className="mx-auto max-w-[1680px]">
           <ProjectReveal>
             <div className="grid gap-10 lg:grid-cols-[360px_minmax(0,1fr)] lg:items-end">
@@ -97,10 +97,7 @@ export default function ProjectFooter({ footer }) {
             </div>
           </ProjectReveal>
 
-          <div className="flex flex-col gap-4 pt-8 text-[0.95rem] text-white/80 lg:flex-row lg:items-center lg:justify-between">
-            <p>{footer.legal}</p>
-            <p>{footer.credits}</p>
-          </div>
+         
         </div>
       </section>
     </footer>
