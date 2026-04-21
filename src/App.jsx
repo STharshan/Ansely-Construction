@@ -12,7 +12,7 @@ import ProjectDetailsPage from "./pages/ProjectDetailsPage";
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} /> 
-          <Route path="/agent/john-carter" element={<AgentProfilePage />} />
+          <Route path="/agents/:slug" element={<AgentProfilePage />} />
         <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
       </Routes>
     </Router>

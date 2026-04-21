@@ -53,7 +53,6 @@ export const johnCarterProfile = {
         image:
           "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
       },
-      
     ],
   },
   articles: {
@@ -90,3 +89,14 @@ export const johnCarterProfile = {
     },
   ],
 };
+
+export const agents = [
+  {
+    slug: "john-carter",
+    ...johnCarterProfile,
+  },
+];
+
+export const agentsBySlug = Object.fromEntries(
+  agents.map((agent) => [agent.slug, agent]),
+);
