@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function RolixyAgentsCta() {
+export default function AgentsCta() {
   const headingLines = ["Are You Currently Working", "on a Project? Let’s Talk!"];
 
   const headingVariants = {

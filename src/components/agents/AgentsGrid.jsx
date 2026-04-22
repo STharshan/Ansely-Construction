@@ -1,7 +1,7 @@
 import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function RolixyAgentsGrid({ agents }) {
+export default function AgentsGrid({ agents }) {
   const headingText = "Meet Our Expert Agents";
   
   // Title Animation

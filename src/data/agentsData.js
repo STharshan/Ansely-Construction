@@ -1,4 +1,4 @@
-export const rolixyAgents = [
+export const agentsList = [
   {
     name: "Darrell Steward",
     role: "Real Estate Agent",
@@ -49,7 +49,7 @@ export const rolixyAgents = [
   },
 ];
 
-export const rolixyAgentsVideo = {
+export const agentsVideo = {
   title: "Property Showcase",
   subtitle: "Featured Video Tour",
   poster:

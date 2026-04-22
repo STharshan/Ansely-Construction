@@ -2,7 +2,7 @@ import { Pause, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
-export default function RolixyAgentsVideo({ video }) {
+export default function AgentsVideo({ video }) {
   const videoRef = useRef(null);
   const [playing, setPlaying] = useState(true);
   const title = video.title || "";
