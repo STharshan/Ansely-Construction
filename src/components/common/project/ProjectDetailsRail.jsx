@@ -6,6 +6,7 @@ import {
   LocateFixed,
   Maximize,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const detailIcons = {
   Location: LocateFixed,
@@ -41,10 +42,13 @@ export default function ProjectDetailsRail({ details, consultation, sticky = tru
             );
           })}
         </div>
-        <button className="font-geist mt-12 inline-flex h-[49.6px] max-w-full items-center justify-start gap-4 rounded-[100px] bg-[#13120b] px-6 py-4 text-[16px] font-semibold capitalize leading-6 text-white transition hover:bg-[#252019]">
+        <Link
+          to="/#contact"
+          className="font-geist mt-12 inline-flex h-[49.6px] max-w-full items-center justify-start gap-4 rounded-[100px] bg-[#13120b] px-6 py-4 text-[16px] font-semibold capitalize leading-6 text-white transition hover:bg-[#252019]"
+        >
           <span className="h-4 w-4 shrink-0 rounded-full bg-white" />
           {consultation.primaryActionLabel}
-        </button>
+        </Link>
       </div>
     </aside>
   );

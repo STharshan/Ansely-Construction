@@ -16,7 +16,7 @@ const headingWords = [
 export default function CtaContactSection() {
   return (
     // OUTER WHITE
-    <section className="bg-white">
+    <section className="bg-white" id="contact">
 
       {/* INNER GREY CONTAINER */}
       <div className="relative overflow-hidden rounded-[30px] bg-white">

@@ -18,7 +18,7 @@ export default function RelatedProjects({ relatedProjects }) {
   };
 
   return (
-    <section className="overflow-hidden bg-white px-6 py-24 text-[#12100b] sm:px-10 lg:px-14 lg:py-32">
+    <section className="overflow-hidden bg-white px-6 py-24 text-[#12100b] sm:px-10 lg:px-20 lg:py-32">
       <div className="mx-auto max-w-[1680px]">
         <ProjectReveal className="text-center">
           <p className="text-[1rem] uppercase tracking-[-0.03em] text-[#1a1812]">
