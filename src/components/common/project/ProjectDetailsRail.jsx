@@ -30,7 +30,7 @@ export default function ProjectDetailsRail({ details, consultation, sticky = tru
             return (
               <div
                 key={detail.label}
-                className="flex items-center gap-4 border-b border-[#ece8df] py-6"
+                className="flex items-center gap-4 border-b border-[#ece8df] py-4"
               >
                 <Icon className="shrink-0 text-[#17130d]" size={28} strokeWidth={1.8} />
                 <p className="font-geist text-[16px] font-normal leading-6 text-[#13120b]">
