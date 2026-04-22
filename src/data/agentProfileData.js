@@ -83,6 +83,109 @@ export const agents = [
     slug: "peter-endo",
     ...peterEndoProfile,
   },
+  ...[
+    {
+      slug: "darrell-steward",
+      name: "Darrell Steward",
+      handle: "@darrellsteward",
+      role: "Real Estate Agent",
+      image:
+        "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907147d14abba328b79cb13_agents-thumbnail%20(2).webp",
+      email: "hello@darrellsteward.com",
+      phone: "(414) 325 - 427",
+      location: "San Francisco, CA",
+    },
+    {
+      slug: "thory-coil",
+      name: "Thory Coil",
+      handle: "@thorycoil",
+      role: "Property Manager",
+      image:
+        "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907144da7087189860cda65_agents-thumbnail%20(3).webp",
+      email: "hello@thorycoil.com",
+      phone: "(323) 904 - 118",
+      location: "Los Angeles, CA",
+    },
+    {
+      slug: "michel-john",
+      name: "Michel John",
+      handle: "@micheljohn",
+      role: "Real Estate Broker",
+      image:
+        "https://cdn.prod.website-files.com/6906f65625527ba689e23026/690713f4fa0fb6511754dddc_agents-thumbnail%20(4).webp",
+      email: "hello@micheljohn.com",
+      phone: "(510) 822 - 643",
+      location: "Austin, TX",
+    },
+    {
+      slug: "brooklyn-simmons",
+      name: "Brooklyn Simmons",
+      handle: "@brooklynsimmons",
+      role: "Real Estate Agent",
+      image:
+        "https://cdn.prod.website-files.com/6906f65625527ba689e23026/690713a6fe69ef3e153de7ce_agents-thumbnail%20(6).webp",
+      email: "hello@brooklynsimmons.com",
+      phone: "(206) 443 - 812",
+      location: "Seattle, WA",
+    },
+    {
+      slug: "theresa-webb",
+      name: "Theresa Webb",
+      handle: "@theresawebb",
+      role: "Property Manager",
+      image:
+        "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907137de1097d94d37cd6b3_agents-thumbnail%20(1).webp",
+      email: "hello@theresawebb.com",
+      phone: "(312) 640 - 297",
+      location: "Chicago, IL",
+    },
+    {
+      slug: "kathryn-murphy",
+      name: "Kathryn Murphy",
+      handle: "@kathrynmurphy",
+      role: "Real Estate Broker",
+      image:
+        "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907131866e3afba3c347b89_agents-thumbnail%20(5).webp",
+      email: "hello@kathrynmurphy.com",
+      phone: "(646) 558 - 709",
+      location: "New York, NY",
+    },
+  ].map((agent) => ({
+    slug: agent.slug,
+    profileCard: {
+      name: agent.name,
+      handle: agent.handle,
+      role: agent.role,
+      image: agent.image,
+      cover:
+        "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=1400&q=80",
+      contactButtonLabel: "Contact me",
+      copyUrl: `http://propertyx.com/${agent.handle}`,
+      contactDetails: [
+        { label: "Email address", value: agent.email, type: "email" },
+        { label: "Phone number", value: agent.phone, type: "phone" },
+        { label: "Location", value: agent.location, type: "location" },
+        { label: "Position", value: agent.role, type: "position" },
+      ],
+    },
+    about: {
+      title: "About me",
+      paragraphs: [
+        `${agent.name} helps buyers, sellers, and investors make confident property decisions with clear guidance and practical market insight.`,
+        "Their work focuses on smooth communication, thoughtful property matching, and reliable support from the first consultation through closing.",
+      ],
+    },
+    experience: {
+      title: "My experience",
+      intro: `${agent.name} brings hands-on experience across residential sales, client advisory, negotiation, and property presentation.`,
+      points: [
+        "Guided clients through property searches, shortlist reviews, and purchase planning.",
+        "Supported pricing strategy and negotiation for competitive property opportunities.",
+        "Worked with homeowners, investors, and relocation clients across varied budgets.",
+        "Built long-term client relationships through responsive and transparent service.",
+      ],
+    },
+  })),
 ];
 
 export const agentsBySlug = Object.fromEntries(

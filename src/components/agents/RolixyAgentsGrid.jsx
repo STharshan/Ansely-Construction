@@ -87,7 +87,7 @@ export default function RolixyAgentsGrid({ agents }) {
             whileInView="visible"
             viewport={{ once: true }}
             variants={headingVariants}
-            className="mt-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-[#2d2019] sm:text-[62px]"
+            className="font-inter mt-4 text-center text-[34px] font-medium leading-[44.2px] tracking-normal text-[#0a0a0a] sm:text-[50px] sm:leading-[65px] lg:text-[62px] lg:leading-[80.6px]"
           >
             {headingText.split("").map((letter, index) => (
               <motion.span

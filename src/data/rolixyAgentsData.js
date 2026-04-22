@@ -4,7 +4,7 @@ export const rolixyAgents = [
     role: "Real Estate Agent",
     image:
       "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907147d14abba328b79cb13_agents-thumbnail%20(2).webp",
-    profileLink: "/agent/darrell-steward",
+    profileLink: "/agents/darrell-steward",
     socialLink: "https://www.linkedin.com/",
   },
   {
@@ -12,7 +12,7 @@ export const rolixyAgents = [
     role: "Property Manager",
     image:
       "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907144da7087189860cda65_agents-thumbnail%20(3).webp",
-    profileLink: "/agent/thory-coil",
+    profileLink: "/agents/thory-coil",
     socialLink: "https://www.linkedin.com/",
   },
   {
@@ -20,7 +20,7 @@ export const rolixyAgents = [
     role: "Real Estate Broker",
     image:
       "https://cdn.prod.website-files.com/6906f65625527ba689e23026/690713f4fa0fb6511754dddc_agents-thumbnail%20(4).webp",
-    profileLink: "/agent/michel-john",
+    profileLink: "/agents/michel-john",
     socialLink: "https://www.linkedin.com/",
   },
   {
@@ -28,7 +28,7 @@ export const rolixyAgents = [
     role: "Real Estate Agent",
     image:
       "https://cdn.prod.website-files.com/6906f65625527ba689e23026/690713a6fe69ef3e153de7ce_agents-thumbnail%20(6).webp",
-    profileLink: "/agent/brooklyn-simmons",
+    profileLink: "/agents/brooklyn-simmons",
     socialLink: "https://www.linkedin.com/",
   },
   {
@@ -36,7 +36,7 @@ export const rolixyAgents = [
     role: "Property Manager",
     image:
       "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907137de1097d94d37cd6b3_agents-thumbnail%20(1).webp",
-    profileLink: "/agent/theresa-webb",
+    profileLink: "/agents/theresa-webb",
     socialLink: "https://www.linkedin.com/",
   },
   {
@@ -44,7 +44,7 @@ export const rolixyAgents = [
     role: "Real Estate Broker",
     image:
       "https://cdn.prod.website-files.com/6906f65625527ba689e23026/6907131866e3afba3c347b89_agents-thumbnail%20(5).webp",
-    profileLink: "/agent/kathryn-murphy",
+    profileLink: "/agents/kathryn-murphy",
     socialLink: "https://www.linkedin.com/",
   },
 ];
@@ -59,4 +59,3 @@ export const rolixyAgentsVideo = {
   webm:
     "https://cdn.prod.website-files.com/6901d0b0557bf870080ad41b%2F6906e7167bfc8248316bd05a_relixy-video-transcode.webm",
 };
-

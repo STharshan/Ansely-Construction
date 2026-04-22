@@ -43,7 +43,7 @@ export default function RolixyAgentsVideo({ video }) {
   return (
     <section className="bg-white pb-16 lg:pb-24">
       <div className="w-full overflow-hidden">
-        <div className="relative h-[430px] sm:h-[560px] lg:h-[700px]">
+        <div className="relative h-[605px] sm:h-[560px] lg:h-[700px]">
           <video
             ref={videoRef}
             autoPlay
@@ -60,12 +60,12 @@ export default function RolixyAgentsVideo({ video }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-black/10" />
           <button
             onClick={togglePlayback}
-            className="absolute bottom-8 right-6 inline-flex h-24 w-24 items-center justify-center rounded-full bg-white text-[#3b1107] shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:bottom-10 sm:right-10 sm:h-28 sm:w-28"
+            className="absolute left-1/2 top-1/2 inline-flex h-[84px] w-[84px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#3b1107] shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:bottom-10 sm:left-auto sm:right-10 sm:top-auto sm:h-28 sm:w-28 sm:translate-x-0 sm:translate-y-0"
           >
             {playing ? <Pause size={40} strokeWidth={2} /> : <Play size={40} strokeWidth={2} />}
           </button>
 
-          <div className="absolute bottom-10 left-6 right-36 sm:bottom-12 sm:left-10">
+          <div className="absolute bottom-7 left-6 right-6 sm:bottom-12 sm:left-10 sm:right-36">
             <motion.h2
               initial="hidden"
               animate="visible"
