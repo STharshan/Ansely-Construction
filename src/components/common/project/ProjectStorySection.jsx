@@ -14,10 +14,10 @@ export default function ProjectStorySection({
       <div className="mx-auto grid max-w-[1680px] gap-14 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,0.78fr)] lg:gap-18">
         <div className="space-y-16">
           <ProjectReveal className="max-w-[60rem]">
-            <h1 className="max-w-[11ch] text-[50px] font-semibold uppercase leading-[0.9] tracking-[-0.08em] text-[#050503] sm:text-[72px] lg:text-[96px]">
+            <h1 className="font-geist max-w-[680px] text-[50px] font-semibold uppercase leading-[44px] tracking-[-1px] text-[#13120b] sm:text-[72px] sm:leading-[63.36px] lg:text-[80px] lg:leading-[70.4px]">
               {hero.title}
             </h1>
-            <p className="mt-7 max-w-[46rem] text-[20px] leading-[1.5] text-[#6a7087]">
+            <p className="font-geist mt-7 max-w-[46rem] text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
               {hero.description}
             </p>
           </ProjectReveal>
@@ -37,7 +37,7 @@ export default function ProjectStorySection({
               <h2 className="text-[2.1rem] font-semibold uppercase leading-[0.95] tracking-[-0.06em] sm:text-[2.8rem] lg:text-[3.25rem]">
                 {overview.label}
               </h2>
-              <div className="mt-6 max-w-[52rem] space-y-4 text-[1rem] leading-7 text-[#6a7087] sm:text-[1.05rem]">
+              <div className="font-geist mt-6 max-w-[52rem] space-y-4 text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
                 {overview.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -50,7 +50,7 @@ export default function ProjectStorySection({
               <h2 className="text-[2.1rem] font-semibold uppercase leading-[0.95] tracking-[-0.06em] sm:text-[2.8rem] lg:text-[3.25rem]">
                 {designApproach.label}
               </h2>
-              <div className="mt-6 max-w-[52rem] space-y-4 text-[1rem] leading-7 text-[#6a7087] sm:text-[1.05rem]">
+              <div className="font-geist mt-6 max-w-[52rem] space-y-4 text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
                 {designApproach.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
