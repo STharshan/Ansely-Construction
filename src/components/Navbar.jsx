@@ -24,11 +24,18 @@ function LogoMark() {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ variant = "transparent" }) {
   const [open, setOpen] = useState(false);
+  const isSolid = variant === "solid";
 
   return (
-    <header className="absolute inset-x-0 top-0 z-30 text-white p-6">
+    <header
+      className={`inset-x-0 top-0 z-30 p-6 ${
+        isSolid
+          ? "relative border-b border-[#e8dfd5] bg-white text-[#2d2019] shadow-sm"
+          : "absolute text-white"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 md:px-10 lg:px-8">
         <div className="flex items-center justify-between gap-4 pb-8">
           <div className="flex items-center gap-3">
@@ -42,7 +49,9 @@ export default function Navbar() {
             {menuItems.map((item) => (
               <li
                 key={item.label}
-                className="flex cursor-pointer items-center gap-1 text-white/95 transition hover:text-[#d6d17a]"
+                className={`flex cursor-pointer items-center gap-1 transition hover:text-[#b2b15c] ${
+                  isSolid ? "text-[#2d2019]/90" : "text-white/95"
+                }`}
               >
                 <span>{item.label}</span>
                 {item.hasDropdown && <ChevronDown size={15} strokeWidth={2.3} />}
@@ -58,7 +67,9 @@ export default function Navbar() {
 
             <button
               onClick={() => setOpen((value) => !value)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 backdrop-blur-md lg:hidden"
+              className={`inline-flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur-md lg:hidden ${
+                isSolid ? "border-[#d8c8bb] bg-[#f7f3ee] text-[#2d2019]" : "border-white/15 bg-white/10"
+              }`}
               aria-label="Toggle navigation menu"
             >
               {open ? <X size={20} /> : <Menu size={20} />}
@@ -67,12 +78,20 @@ export default function Navbar() {
         </div>
 
         {open && (
-          <div className="mt-4 rounded-[28px] border border-white/10 bg-[rgba(20,25,31,0.9)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl lg:hidden">
+          <div
+            className={`mt-4 rounded-[28px] border p-5 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl lg:hidden ${
+              isSolid
+                ? "border-[#e8dfd5] bg-white"
+                : "border-white/10 bg-[rgba(20,25,31,0.9)]"
+            }`}
+          >
             <ul className="flex flex-col gap-4 text-base font-medium">
               {menuItems.map((item) => (
                 <li
                   key={item.label}
-                  className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3 text-white/90"
+                  className={`flex items-center justify-between rounded-2xl border px-4 py-3 ${
+                    isSolid ? "border-[#e8dfd5] text-[#2d2019]" : "border-white/10 text-white/90"
+                  }`}
                 >
                   <span>{item.label}</span>
                   {item.hasDropdown && <ChevronDown size={16} strokeWidth={2.3} />}

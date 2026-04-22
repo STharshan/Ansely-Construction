@@ -6,17 +6,31 @@ import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import RolixyAgentsPage from "./pages/RolixyAgentsPage";
 import Footer from "./components/Footer";
 
-  function App() {
+function AppLayout() {
+  const { pathname } = useLocation();
+  const solidNavbarRoutes = ["/rolixy-agents", "/agents/", "/projects/"];
+  const navbarVariant = solidNavbarRoutes.some((route) => pathname.startsWith(route))
+    ? "solid"
+    : "transparent";
+
   return (
-    <Router>
-      <Navbar />
+    <>
+      <Navbar variant={navbarVariant} />
       <Routes>
-        <Route path="/" element={<Home />} /> 
-          <Route path="/agents/:slug" element={<AgentProfilePage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/agents/:slug" element={<AgentProfilePage />} />
         <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
-           <Route path="/rolixy-agents" element={<RolixyAgentsPage />} />
+        <Route path="/rolixy-agents" element={<RolixyAgentsPage />} />
       </Routes>
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppLayout />
     </Router>
   );
 }
