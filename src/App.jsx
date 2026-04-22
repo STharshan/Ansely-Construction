@@ -6,6 +6,7 @@ import AgentProfilePage from "./pages/AgentProfilePage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import AgentsPage from "./pages/AgentsPage";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 
 function AppLayout() {
   const { hash, pathname } = useLocation();
@@ -30,6 +31,7 @@ function AppLayout() {
       <Navbar variant={navbarVariant} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About /> } />
         <Route path="/agents" element={<AgentsPage />} />
         <Route path="/agents/:slug" element={<AgentProfilePage />} />
         <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
