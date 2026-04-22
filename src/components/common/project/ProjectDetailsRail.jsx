@@ -20,10 +20,10 @@ export default function ProjectDetailsRail({ details, consultation, sticky = tru
   return (
     <aside className={sticky ? "self-start lg:sticky lg:top-24" : ""}>
       <div className="px-2 sm:px-0">
-        <h2 className="text-[2rem] font-medium tracking-[-0.05em] text-[#12100b] sm:text-[2.2rem]">
+        <h2 className="font-geist text-[26px] font-medium leading-[33.8px] text-[#13120b]">
           Project Details
         </h2>
-        <div className="mt-8">
+        <div className="mt-6">
           {details.map((detail) => {
             const Icon = detailIcons[detail.label] ?? House;
 
@@ -33,16 +33,16 @@ export default function ProjectDetailsRail({ details, consultation, sticky = tru
                 className="flex items-center gap-4 border-b border-[#ece8df] py-6"
               >
                 <Icon className="shrink-0 text-[#17130d]" size={28} strokeWidth={1.8} />
-                <p className="text-[1rem] leading-6 text-[#1c1a15] sm:text-[1.02rem]">
-                  <span className="font-semibold">{detail.label}:</span>{" "}
-                  <span className="text-[#2d2a24]">{detail.value}</span>
+                <p className="font-geist text-[16px] font-normal leading-6 text-[#13120b]">
+                  <span className="font-semibold text-[#13120b]">{detail.label}:</span>{" "}
+                  <span className="text-[#13120b]">{detail.value}</span>
                 </p>
               </div>
             );
           })}
         </div>
-        <button className="mt-12 inline-flex min-h-16 items-center gap-4 rounded-full bg-[#12100b] px-9 text-[1rem] font-semibold uppercase tracking-[-0.03em] text-white transition hover:bg-[#252019]">
-          <span className="h-4 w-4 rounded-full bg-white" />
+        <button className="font-geist mt-12 inline-flex h-[49.6px] max-w-full items-center justify-start gap-4 rounded-[100px] bg-[#13120b] px-6 py-4 text-[16px] font-semibold capitalize leading-6 text-white transition hover:bg-[#252019]">
+          <span className="h-4 w-4 shrink-0 rounded-full bg-white" />
           {consultation.primaryActionLabel}
         </button>
       </div>
