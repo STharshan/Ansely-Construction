@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ProjectReveal from "./ProjectReveal";
 
 function FormLine({ label }) {
@@ -15,14 +16,35 @@ export default function ProjectFooter({ footer }) {
   const statementLines = footer.statement
     .split(/(?<=\.)\s+/)
     .filter(Boolean);
+  const leftReveal = {
+    hidden: { opacity: 0, x: -48 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.9, ease: [0.25, 0.1, 0.25, 1] },
+    },
+  };
+  const rightReveal = {
+    hidden: { opacity: 0, x: 48 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.9, ease: [0.25, 0.1, 0.25, 1], delay: 0.1 },
+    },
+  };
 
   return (
-    <footer className="bg-[#15130d] text-white">
-      <section className="bg-white px-5 pb-20 pt-16 text-[#12100b] sm:px-8 lg:px-10 lg:pb-24 lg:pt-20">
+    <footer className="overflow-x-clip bg-[#15130d] text-white">
+      <section className="overflow-x-clip bg-white px-5 pb-20 pt-16 text-[#12100b] sm:px-8 lg:px-20 lg:pb-24 lg:pt-20">
         <div className="mx-auto max-w-[1680px]">
           <ProjectReveal>
             <div className="grid gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:items-end">
-              <div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.4 }}
+                variants={leftReveal}
+              >
                 <p className="text-[44px] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[60px] lg:text-[72px] lg:whitespace-nowrap">
                   {footer.eyebrow}
                 </p>
@@ -30,19 +52,25 @@ export default function ProjectFooter({ footer }) {
                   <span className="h-4 w-4 rounded-full bg-white" />
                   {footer.ctaLabel}
                 </button>
-              </div>
+              </motion.div>
 
-              <div className="lg:pb-1">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.4 }}
+                variants={rightReveal}
+                className="lg:pb-1"
+              >
                 <h2 className="text-[44px] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[60px] lg:text-[72px] lg:whitespace-nowrap">
                   {footer.title}
                 </h2>
-              </div>
+              </motion.div>
             </div>
           </ProjectReveal>
         </div>
       </section>
 
-      <section className="px-5 pb-16 pt-[4.5rem] sm:px-8 lg:px-10 lg:pb-20 lg:pt-20">
+      <section className="px-5 pb-16 pt-[4.5rem] sm:px-8 lg:px-20 lg:pb-20 lg:pt-20">
         <div className="mx-auto max-w-[1680px]">
           <ProjectReveal>
             <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_460px] lg:items-start">
