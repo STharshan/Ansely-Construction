@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AgentProfilePage from "./pages/AgentProfilePage";
@@ -7,11 +8,22 @@ import AgentsPage from "./pages/AgentsPage";
 import Footer from "./components/Footer";
 
 function AppLayout() {
-  const { pathname } = useLocation();
+  const { hash, pathname } = useLocation();
   const solidNavbarRoutes = ["/agents", "/projects/"];
   const navbarVariant = solidNavbarRoutes.some((route) => pathname.startsWith(route))
     ? "solid"
     : "transparent";
+
+  useEffect(() => {
+    if (!hash) return;
+
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    window.setTimeout(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  }, [hash, pathname]);
 
   return (
     <>
