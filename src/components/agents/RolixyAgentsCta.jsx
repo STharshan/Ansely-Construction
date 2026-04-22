@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export default function RolixyAgentsCta() {
-  const heading = "Are You Currently Working on a Project? Let’s Talk!";
+  const headingLines = ["Are You Currently Working", "on a Project? Let’s Talk!"];
 
   const headingVariants = {
     hidden: {},
@@ -44,42 +44,46 @@ export default function RolixyAgentsCta() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={headingVariants}
-            className="max-w-[1100px] text-[34px] font-semibold leading-[1.2] tracking-[0.01em] text-white sm:text-[56px] lg:text-[72px]"
+            className="font-inter max-w-[1100px] text-[30px] font-medium leading-[39px] tracking-normal text-white sm:text-[38px] sm:leading-[49.4px] lg:text-[44px] lg:leading-[57.2px]"
           >
-            {heading.split(" ").map((word, wordIndex) => (
-              <span
-                key={`${word}-${wordIndex}`}
-                className="mr-[0.24em] inline-block whitespace-nowrap"
-              >
-                {word.split("").map((letter, letterIndex) => (
-                  <motion.span
-                    key={`${letter}-${wordIndex}-${letterIndex}`}
-                    variants={letterVariants}
-                    className="inline-block"
+            {headingLines.map((line, lineIndex) => (
+              <span key={line} className="block">
+                {line.split(" ").map((word, wordIndex) => (
+                  <span
+                    key={`${word}-${lineIndex}-${wordIndex}`}
+                    className="mr-[0.24em] inline-block whitespace-nowrap last:mr-0"
                   >
-                    {letter}
-                  </motion.span>
+                    {word.split("").map((letter, letterIndex) => (
+                      <motion.span
+                        key={`${letter}-${lineIndex}-${wordIndex}-${letterIndex}`}
+                        variants={letterVariants}
+                        className="inline-block"
+                      >
+                        {letter}
+                      </motion.span>
+                    ))}
+                  </span>
                 ))}
               </span>
             ))}
           </motion.h2>
 
-          <p className="mt-5 max-w-[760px] text-[15px] leading-[1.6] text-white/80 sm:text-[17px]">
+          <p className="font-inter mt-5 w-full max-w-[530px] text-center text-[18px] font-normal leading-[27px] text-white sm:text-[20px] sm:leading-[30px]">
             We value your privacy and promise to send you only the most important and interesting
             information.
           </p>
 
-          <form className="mt-10 w-full max-w-[760px]">
-            <div className="relative flex items-center rounded-full bg-white/95 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.25)]">
+          <form className="mt-10 w-full max-w-[500px]">
+            <div className="relative">
               <input
                 type="email"
                 placeholder="Your email"
-                className="h-[56px] w-full rounded-full bg-transparent px-6 pr-[135px] text-[15px] text-[#1a1a1a] placeholder:text-[#6b6b6b] outline-none sm:h-[62px] sm:px-7 sm:pr-[200px] sm:text-[16px]"
+                className="font-inter relative z-[2] block h-[56px] min-h-[56px] w-full rounded-[100px] border border-black/35 bg-white px-5 py-3 pr-[150px] text-[16px] font-medium leading-5 text-[#0a0a0a] placeholder:font-medium placeholder:text-[#1f1f1f] outline-none sm:pr-[170px]"
               />
 
               <button
                 type="button"
-                className="absolute right-[4px] top-1/2 h-[48px] -translate-y-1/2 rounded-full bg-[#5a1a0c] px-7 text-[14px] font-semibold text-white transition duration-300 hover:bg-[#6d1f0c] sm:right-[5px] sm:h-[52px] sm:px-10 sm:text-[16px]"
+                className="font-inter absolute right-[4px] top-1/2 z-[3] h-[48px] w-[128px] -translate-y-1/2 rounded-[100px] bg-[#5a1a0c] text-[16px] font-semibold leading-5 text-white transition duration-300 hover:bg-[#6d1f0c]"
               >
                 Join Now
               </button>
