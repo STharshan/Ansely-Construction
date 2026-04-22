@@ -34,7 +34,7 @@ export default function ProjectStorySection({
 
           <ProjectReveal>
             <section>
-              <h2 className="text-[2.1rem] font-semibold uppercase leading-[0.95] tracking-[-0.06em] sm:text-[2.8rem] lg:text-[3.25rem]">
+              <h2 className="font-geist text-[42px] font-semibold uppercase leading-[50.4px] tracking-[-1px] text-[#13120b] sm:text-[46px] sm:leading-[55.2px] lg:text-[48px] lg:leading-[57.6px]">
                 {overview.label}
               </h2>
               <div className="font-geist mt-6 max-w-[52rem] space-y-4 text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
@@ -47,7 +47,7 @@ export default function ProjectStorySection({
 
           <ProjectReveal delay={100}>
             <section>
-              <h2 className="text-[2.1rem] font-semibold uppercase leading-[0.95] tracking-[-0.06em] sm:text-[2.8rem] lg:text-[3.25rem]">
+              <h2 className="font-geist text-[42px] font-semibold uppercase leading-[50.4px] tracking-[-1px] text-[#13120b] sm:text-[46px] sm:leading-[55.2px] lg:text-[48px] lg:leading-[57.6px]">
                 {designApproach.label}
               </h2>
               <div className="font-geist mt-6 max-w-[52rem] space-y-4 text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
