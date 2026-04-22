@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const menuItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
+  { label: "Agent", path: "/agents" },
   { label: "Why Choose Us", path: "/#whyus" },
   { label: "Contact Us", path: "/#contact" },
 ];
