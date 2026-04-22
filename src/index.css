@@ -8,14 +8,32 @@
     sans-serif;
   --font-geist: "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  color: #0f172a;
-  background: #f7f7f4;
+  --color-brand: #9c9c55;
+  --color-brand-hover: #87874a;
+  --color-brand-soft: #ecebdc;
+  --color-brand-mist: #f2f3ee;
+  --color-surface: #f2f3ee;
+  --color-surface-alt: #e6e5da;
+  --color-panel: #fbfbf8;
+  --color-ink: #000000;
+  --color-ink-soft: #1f1f1b;
+  --color-ink-muted: #55554c;
+  --color-border: #d8d8cb;
+  --color-white: #ffffff;
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.08);
+  color: var(--color-ink-soft);
+  background: var(--color-surface);
   font-family: var(--font-objectivity);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background: #f7f7f4;
+  background: var(--color-surface);
+  color: var(--color-ink-soft);
 }
 
 body,
@@ -44,6 +62,15 @@ select {
 
 img {
   display: block;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-white);
 }
 
 @keyframes textReveal {

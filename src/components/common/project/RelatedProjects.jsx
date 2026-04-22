@@ -18,10 +18,10 @@ export default function RelatedProjects({ relatedProjects }) {
   };
 
   return (
-    <section className="overflow-hidden bg-white px-6 py-24 text-[#12100b] sm:px-10 lg:px-20 lg:py-32">
+    <section className="overflow-hidden bg-[var(--color-panel)] px-6 py-24 text-[var(--color-ink)] sm:px-10 lg:px-20 lg:py-32">
       <div className="mx-auto max-w-[1680px]">
         <ProjectReveal className="text-center">
-          <p className="text-[1rem] uppercase tracking-[-0.03em] text-[#1a1812]">
+          <p className="text-[1rem] uppercase tracking-[-0.03em] text-[var(--color-ink-soft)]">
             {relatedProjects.eyebrow}
           </p>
           <h2 className="mx-auto mt-4 max-w-4xl text-[2.5rem] font-semibold uppercase leading-[0.96] tracking-[-0.07em] sm:text-[48px] lg:text-[48px]">
@@ -45,11 +45,11 @@ export default function RelatedProjects({ relatedProjects }) {
                     <h3 className="text-[33px] font-medium uppercase leading-[1.05] tracking-[-0.045em]">
                       {activeProject.title}
                     </h3>
-                    <div className="text-[15px] text-[#6a7087]">
+                    <div className="text-[15px] text-[var(--color-ink-muted)]">
                       {activeProject.location} / {activeProject.year}
                     </div>
                   </div>
-                  <p className="max-w-[15.5rem] text-[16px] leading-[1.7] text-[#6a7087]">
+                  <p className="max-w-[15.5rem] text-[16px] leading-[1.7] text-[var(--color-ink-muted)]">
                     {activeProject.description}
                   </p>
                 </div>
@@ -71,10 +71,10 @@ export default function RelatedProjects({ relatedProjects }) {
                   <div className="flex items-start justify-start lg:justify-end">
                     <Link
                       to={`/projects/${activeProject.slug}`}
-                      className="inline-flex items-center gap-3 text-[0.95rem] font-medium uppercase tracking-[-0.02em] text-[#ef5934]"
+                      className="inline-flex items-center gap-3 text-[0.95rem] font-medium uppercase tracking-[-0.02em] text-[var(--color-brand)]"
                     >
-                      <span className="h-5 w-5 rounded-full bg-[#ef5934]/18 p-[0.28rem]">
-                        <span className="block h-full w-full rounded-full bg-[#ef5934]" />
+                      <span className="h-5 w-5 rounded-full bg-[color:rgba(156,156,85,0.18)] p-[0.28rem]">
+                        <span className="block h-full w-full rounded-full bg-[var(--color-brand)]" />
                       </span>
                       Learn More
                     </Link>
@@ -88,7 +88,7 @@ export default function RelatedProjects({ relatedProjects }) {
                 type="button"
                 onClick={goPrevious}
                 aria-label="Show previous project"
-                className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#1b1710] bg-white text-[#1b1710] transition hover:bg-[#1b1710] hover:text-white"
+                className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-ink-soft)] bg-white text-[var(--color-ink-soft)] transition hover:bg-[var(--color-ink)] hover:text-white"
               >
                 <ArrowLeft size={24} strokeWidth={1.5} />
               </button>
@@ -96,7 +96,7 @@ export default function RelatedProjects({ relatedProjects }) {
                 type="button"
                 onClick={goNext}
                 aria-label="Show next project"
-                className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#1b1710] bg-white text-[#1b1710] transition hover:bg-[#1b1710] hover:text-white"
+                className="pointer-events-auto flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-ink-soft)] bg-white text-[var(--color-ink-soft)] transition hover:bg-[var(--color-ink)] hover:text-white"
               >
                 <ArrowRight size={24} strokeWidth={1.5} />
               </button>

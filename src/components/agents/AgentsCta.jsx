@@ -11,7 +11,7 @@ export default function AgentsCta() {
   const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-  const headingLines = ["Are You Currently Working", "on a Project? Let’s Talk!"];
+  const headingLines = ["Are You Currently Working", "on a Project? Let's Talk!"];
 
   const headingVariants = {
     hidden: {},
@@ -76,7 +76,7 @@ export default function AgentsCta() {
   };
 
   return (
-    <section className="bg-white">
+    <section className="bg-[var(--color-panel)]">
       <div className="relative min-h-[620px] overflow-hidden lg:min-h-[760px]">
         <div className="absolute inset-0">
           <img
@@ -131,13 +131,13 @@ export default function AgentsCta() {
                 placeholder="Your email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                className="font-inter relative z-[2] block h-[56px] min-h-[56px] w-full rounded-[100px] border border-black/35 bg-white px-5 py-3 pr-[150px] text-[16px] font-medium leading-5 text-[#0a0a0a] placeholder:font-medium placeholder:text-[#1f1f1f] outline-none sm:pr-[170px]"
+                className="font-inter relative z-[2] block h-[56px] min-h-[56px] w-full rounded-[100px] border border-black/20 bg-white px-5 py-3 pr-[150px] text-[16px] font-medium leading-5 text-[var(--color-ink)] placeholder:font-medium placeholder:text-[var(--color-ink-muted)] outline-none sm:pr-[170px]"
               />
 
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="font-inter absolute right-[4px] top-1/2 z-[3] h-[48px] w-[128px] -translate-y-1/2 rounded-[100px] bg-[#5a1a0c] text-[16px] font-semibold leading-5 text-white transition duration-300 hover:bg-[#6d1f0c] disabled:cursor-not-allowed disabled:opacity-70"
+                className="font-inter absolute right-[4px] top-1/2 z-[3] h-[48px] w-[128px] -translate-y-1/2 rounded-[100px] bg-[var(--color-brand)] text-[16px] font-semibold leading-5 text-white transition duration-300 hover:bg-[var(--color-brand-hover)] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status === "loading" ? "Sending" : "Join Now"}
               </button>
@@ -145,7 +145,7 @@ export default function AgentsCta() {
             {message && (
               <p
                 className={`font-inter mt-4 text-center text-[14px] font-medium leading-5 ${
-                  status === "success" ? "text-white" : "text-[#ffd7d7]"
+                  status === "success" ? "text-white" : "text-[var(--color-brand-soft)]"
                 }`}
               >
                 {message}

@@ -5,7 +5,7 @@ import { agentsList, agentsVideo } from "../data/agentsData";
 
 export default function AgentsPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-[var(--color-panel)]">
       <AgentsGrid agents={agentsList} />
       <AgentsVideo video={agentsVideo} />
       <AgentsCta />

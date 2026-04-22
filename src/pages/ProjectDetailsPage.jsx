@@ -13,7 +13,7 @@ export default function ProjectDetailsPage() {
   }
 
   return (
-    <main className="bg-[#fbfaf7]">
+    <main className="bg-[var(--color-panel)]">
       <ProjectStorySection
         hero={project.hero}
         overview={project.overview}

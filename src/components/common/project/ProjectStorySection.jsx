@@ -27,20 +27,20 @@ export default function ProjectStorySection({
   };
 
   return (
-    <section className="bg-white px-5 pb-20 pt-14 text-[#12100b] sm:px-8 sm:pt-16 lg:px-20 lg:pb-28 lg:pt-20">
+    <section className="bg-[var(--color-panel)] px-5 pb-20 pt-14 text-[var(--color-ink)] sm:px-8 sm:pt-16 lg:px-20 lg:pb-28 lg:pt-20">
       <div className="mx-auto grid max-w-[1680px] gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(300px,0.78fr)] lg:gap-12">
         <div className="space-y-10 lg:space-y-12">
           <ProjectReveal className="max-w-[60rem]">
-            <h1 className="font-geist max-w-[680px] text-[50px] font-semibold uppercase leading-[44px] tracking-[-1px] text-[#13120b] sm:text-[72px] sm:leading-[63.36px] lg:text-[80px] lg:leading-[70.4px]">
+            <h1 className="font-geist max-w-[680px] text-[50px] font-semibold uppercase leading-[44px] tracking-[-1px] text-[var(--color-ink)] sm:text-[72px] sm:leading-[63.36px] lg:text-[80px] lg:leading-[70.4px]">
               {hero.title}
             </h1>
-            <p className="font-geist mt-5 max-w-[46rem] text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
+            <p className="font-geist mt-5 max-w-[46rem] text-[18px] font-normal leading-[25.2px] text-[var(--color-ink-muted)]">
               {hero.description}
             </p>
           </ProjectReveal>
 
           <ProjectReveal>
-            <div className="overflow-hidden ">
+            <div className="overflow-hidden">
               <img
                 src={hero.image}
                 alt={hero.title}
@@ -51,10 +51,10 @@ export default function ProjectStorySection({
 
           <ProjectReveal>
             <section>
-              <h2 className="font-geist text-[42px] font-semibold uppercase leading-[50.4px] tracking-[-1px] text-[#13120b] sm:text-[46px] sm:leading-[55.2px] lg:text-[48px] lg:leading-[57.6px]">
+              <h2 className="font-geist text-[42px] font-semibold uppercase leading-[50.4px] tracking-[-1px] text-[var(--color-ink)] sm:text-[46px] sm:leading-[55.2px] lg:text-[48px] lg:leading-[57.6px]">
                 {overview.label}
               </h2>
-              <div className="font-geist mt-4 max-w-[52rem] space-y-3 text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
+              <div className="font-geist mt-4 max-w-[52rem] space-y-3 text-[18px] font-normal leading-[25.2px] text-[var(--color-ink-muted)]">
                 {overview.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -64,10 +64,10 @@ export default function ProjectStorySection({
 
           <ProjectReveal delay={100}>
             <section>
-              <h2 className="font-geist text-[42px] font-semibold uppercase leading-[50.4px] tracking-[-1px] text-[#13120b] sm:text-[46px] sm:leading-[55.2px] lg:text-[48px] lg:leading-[57.6px]">
+              <h2 className="font-geist text-[42px] font-semibold uppercase leading-[50.4px] tracking-[-1px] text-[var(--color-ink)] sm:text-[46px] sm:leading-[55.2px] lg:text-[48px] lg:leading-[57.6px]">
                 {designApproach.label}
               </h2>
-              <div className="font-geist mt-4 max-w-[52rem] space-y-3 text-[18px] font-normal leading-[25.2px] text-[#5e6073]">
+              <div className="font-geist mt-4 max-w-[52rem] space-y-3 text-[18px] font-normal leading-[25.2px] text-[var(--color-ink-muted)]">
                 {designApproach.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -79,7 +79,7 @@ export default function ProjectStorySection({
                     key={image.src}
                     type="button"
                     onClick={() => setActiveImageIndex(index)}
-                    className="group overflow-hidden rounded-[1rem] bg-[#13120b] text-left focus:outline-none focus:ring-2 focus:ring-[#13120b] focus:ring-offset-4"
+                    className="group overflow-hidden rounded-[1rem] bg-[var(--color-ink)] text-left focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-4"
                   >
                     <img
                       src={image.src}
@@ -102,7 +102,7 @@ export default function ProjectStorySection({
       </div>
 
       {activeImage && (
-        <div className="fixed inset-0 z-50 bg-[#101010]/95 px-4 py-4 text-white sm:px-8">
+        <div className="fixed inset-0 z-50 bg-black/95 px-4 py-4 text-white sm:px-8">
           <button
             type="button"
             onClick={closeLightbox}
@@ -146,7 +146,7 @@ export default function ProjectStorySection({
                   aria-label={`Show image ${index + 1}`}
                   className={`h-16 w-24 shrink-0 overflow-hidden border transition sm:h-20 sm:w-28 ${
                     index === activeImageIndex
-                      ? "border-white opacity-100"
+                      ? "border-[var(--color-brand)] opacity-100"
                       : "border-transparent opacity-55 hover:opacity-85"
                   }`}
                 >

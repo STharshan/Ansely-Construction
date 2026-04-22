@@ -11,7 +11,7 @@ export default function AgentProfilePage() {
   }
 
   return (
-    <main className="bg-[#f7f7f4]">
+    <main className="bg-[var(--color-surface)]">
       <AgentHero
         profileCard={profile.profileCard}
         about={profile.about}

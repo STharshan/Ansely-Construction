@@ -34,8 +34,8 @@ export default function ProjectFooter({ footer }) {
   };
 
   return (
-    <footer className="overflow-x-clip bg-[#15130d] text-white">
-      <section className="overflow-x-clip bg-white px-5 pb-20 pt-16 text-[#12100b] sm:px-8 lg:px-20 lg:pb-24 lg:pt-20">
+    <footer className="overflow-x-clip bg-[var(--color-ink)] text-white">
+      <section className="overflow-x-clip bg-[var(--color-panel)] px-5 pb-20 pt-16 text-[var(--color-ink)] sm:px-8 lg:px-20 lg:pb-24 lg:pt-20">
         <div className="mx-auto max-w-[1680px]">
           <ProjectReveal>
             <div className="grid gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:items-end">
@@ -48,7 +48,7 @@ export default function ProjectFooter({ footer }) {
                 <p className="text-[44px] font-semibold uppercase leading-[0.9] tracking-[-0.08em] sm:text-[60px] lg:text-[72px] lg:whitespace-nowrap">
                   {footer.eyebrow}
                 </p>
-                <button className="mt-10 inline-flex min-h-16 items-center gap-4 rounded-full bg-[#12100b] px-9 text-[1rem] font-semibold uppercase text-white transition hover:bg-[#252019]">
+                <button className="mt-10 inline-flex min-h-16 items-center gap-4 rounded-full bg-[var(--color-brand)] px-9 text-[1rem] font-semibold uppercase text-white transition hover:bg-[var(--color-brand-hover)]">
                   <span className="h-4 w-4 rounded-full bg-white" />
                   {footer.ctaLabel}
                 </button>
@@ -94,7 +94,7 @@ export default function ProjectFooter({ footer }) {
               <div className="grid gap-16 sm:grid-cols-2 sm:gap-14">
                 <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
                   {footer.navLinks.map((item) => (
-                    <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
+                    <a key={item} href="#" className="block text-white/95 transition hover:text-[var(--color-brand-soft)]">
                       {item}
                     </a>
                   ))}
@@ -102,7 +102,7 @@ export default function ProjectFooter({ footer }) {
 
                 <div className="space-y-4 text-[1rem] font-semibold uppercase leading-9">
                   {footer.socialLinks.map((item) => (
-                    <a key={item} href="#" className="block text-white/95 transition hover:text-white/65">
+                    <a key={item} href="#" className="block text-white/95 transition hover:text-[var(--color-brand-soft)]">
                       {item}
                     </a>
                   ))}
@@ -125,16 +125,15 @@ export default function ProjectFooter({ footer }) {
                 <div className="lg:col-span-2">
                   <button
                     type="button"
-                    className="inline-flex min-h-16 items-center gap-4 rounded-full bg-white px-9 text-[1rem] font-semibold uppercase text-[#15130d]"
+                    className="inline-flex min-h-16 items-center gap-4 rounded-full bg-white px-9 text-[1rem] font-semibold uppercase text-[var(--color-ink)]"
                   >
-                    <span className="h-4 w-4 rounded-full bg-[#15130d]" />
+                    <span className="h-4 w-4 rounded-full bg-[var(--color-brand)]" />
                     {footer.form.submitLabel}
                   </button>
                 </div>
               </form>
             </div>
           </ProjectReveal>
-
         </div>
       </section>
     </footer>

@@ -41,7 +41,7 @@ export default function AgentsVideo({ video }) {
   };
 
   return (
-    <section className="bg-white pb-16 lg:pb-24">
+    <section className="bg-[var(--color-panel)] pb-16 lg:pb-24">
       <div className="w-full overflow-hidden">
         <div className="relative h-[605px] sm:h-[560px] lg:h-[700px]">
           <video
@@ -60,7 +60,7 @@ export default function AgentsVideo({ video }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-black/10" />
           <button
             onClick={togglePlayback}
-            className="absolute left-1/2 top-1/2 inline-flex h-[84px] w-[84px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#3b1107] shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:bottom-10 sm:left-auto sm:right-10 sm:top-auto sm:h-28 sm:w-28 sm:translate-x-0 sm:translate-y-0"
+            className="absolute left-1/2 top-1/2 inline-flex h-[84px] w-[84px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[var(--color-brand)] shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:bottom-10 sm:left-auto sm:right-10 sm:top-auto sm:h-28 sm:w-28 sm:translate-x-0 sm:translate-y-0"
           >
             {playing ? <Pause size={40} strokeWidth={2} /> : <Play size={40} strokeWidth={2} />}
           </button>

@@ -4,7 +4,7 @@ const footerLinks = ["Home", "About Us", "Amenities", "Blogs", "Contact Us"];
 
 function LogoMark() {
     return (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#a8a556]">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-brand)]">
             <div className="relative h-7 w-6 text-white">
                 <span className="absolute inset-y-0 left-0 w-[3px] rounded-full bg-current" />
                 <span className="absolute bottom-0 left-[9px] h-full w-[3px] rounded-full bg-current" />
@@ -18,8 +18,8 @@ function LogoMark() {
 
 export default function Footer() {
     return (
-        <footer className="bg-[#efede7] px-3 py-3 md:px-5">
-            <section className="relative overflow-hidden rounded-[24px] bg-[#171717] text-white sm:rounded-[28px]">
+        <footer className="bg-[var(--color-surface)] px-3 py-3 md:px-5">
+            <section className="relative overflow-hidden rounded-[24px] bg-[var(--color-ink)] text-white sm:rounded-[28px]">
                 <div className="absolute inset-0 opacity-100">
                     <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:51px_51px]" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.07),transparent_42%)]" />
@@ -45,7 +45,7 @@ export default function Footer() {
                             </p>
                         </div>
 
-                        <button className="flex h-[90px] w-[90px] items-center justify-center rounded-full bg-[#a8a556] text-sm sm:text-lg font-semibold uppercase tracking-[-0.03em] text-white transition hover:bg-[#bbb766] sm:h-[132px] sm:w-[132px] lg:mt-[6px] lg:h-[110px] lg:w-[110px]">
+                        <button className="flex h-[90px] w-[90px] items-center justify-center rounded-full bg-[var(--color-brand)] text-sm font-semibold uppercase tracking-[-0.03em] text-white transition hover:bg-[var(--color-brand-hover)] sm:h-[132px] sm:w-[132px] sm:text-lg lg:mt-[6px] lg:h-[110px] lg:w-[110px]">
                             LET&apos;S TALK
                         </button>
                     </div>
@@ -56,7 +56,7 @@ export default function Footer() {
                                 <div className="flex items-center gap-3">
                                     <LogoMark />
                                     <div className="text-[2.05rem] font-semibold tracking-[-0.05em]">
-                                        Antila<span className="text-[#a8a556]">.</span>
+                                        Antila<span className="text-[var(--color-brand)]">.</span>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ export default function Footer() {
                                     Subscribe Newsletter&apos;s:
                                 </h3>
 
-                                <div className="mt-7 flex max-w-[396px] items-center rounded-xl bg-[#2f2f2f] p-1">
+                                <div className="mt-7 flex max-w-[396px] items-center rounded-xl bg-white/10 p-1">
                                     <input
                                         type="email"
                                         placeholder="Enter Your E-mail *"
@@ -93,7 +93,7 @@ export default function Footer() {
                                     />
                                     <button
                                         type="button"
-                                        className="flex h-[46px] w-[46px] items-center justify-center rounded-xl bg-[#a8a556] text-white transition hover:bg-[#bbb766]"
+                                        className="flex h-[46px] w-[46px] items-center justify-center rounded-xl bg-[var(--color-brand)] text-white transition hover:bg-[var(--color-brand-hover)]"
                                         aria-label="Send newsletter email"
                                     >
                                         <Send size={20} />
@@ -110,7 +110,7 @@ export default function Footer() {
                                     <a
                                         key={link}
                                         href="/"
-                                        className="text-lg font-semibold text-white transition hover:text-[#a8a556]"
+                                        className="text-lg font-semibold text-white transition hover:text-[var(--color-brand)]"
                                     >
                                         {link}
                                     </a>

@@ -5,14 +5,14 @@ const heroImage =
 
 export default function AboutHero() {
   return (
-    <section className="bg-[#101317] px-3 pb-3 pt-3 sm:px-4 sm:pb-4 sm:pt-4">
-      <div className="relative overflow-hidden rounded-[28px] bg-[#13171d] shadow-[0_25px_80px_rgba(7,10,16,0.35)] sm:rounded-[34px]">
+    <section className="bg-[var(--color-panel)] px-3 pb-3 pt-3 sm:px-4 sm:pb-4 sm:pt-4">
+      <div className="relative overflow-hidden rounded-[28px] bg-[var(--color-ink)] shadow-[0_25px_80px_rgba(7,10,16,0.35)] sm:rounded-[34px]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
 
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,15,22,0.82)_0%,rgba(18,23,31,0.52)_38%,rgba(14,17,23,0.34)_58%,rgba(11,14,18,0.64)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.52)_38%,rgba(0,0,0,0.34)_58%,rgba(0,0,0,0.64)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,15,0.18)_0%,rgba(8,11,15,0.16)_48%,rgba(8,11,15,0.72)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(255,255,255,0.12),transparent_28%)]" />
         <div className="absolute inset-x-0 bottom-0 h-[24%] bg-[linear-gradient(180deg,rgba(7,9,13,0)_0%,rgba(7,9,13,0.78)_100%)]" />
@@ -21,7 +21,7 @@ export default function AboutHero() {
           <div className="w-full max-w-[1180px]">
             <div className="max-w-[920px]">
               <p className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur-md sm:text-sm">
-                <span className="h-2 w-2 rounded-full bg-[#b07b3d]" />
+                <span className="h-2 w-2 rounded-full bg-[var(--color-brand)]" />
                 About Ansely
               </p>
 
@@ -35,11 +35,11 @@ export default function AboutHero() {
             <div className="mt-8 grid gap-6 lg:mt-10 lg:grid-cols-[280px_minmax(0,560px)] lg:items-center lg:gap-10">
               <a
                 href="/projects"
-                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[#16130f] px-6 py-4 text-sm font-semibold uppercase tracking-[0.04em] text-white shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition duration-300 hover:bg-white hover:text-[#111111] sm:px-7 sm:py-5 sm:text-base"
+                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[var(--color-brand)] px-6 py-4 text-sm font-semibold uppercase tracking-[0.04em] text-white shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition duration-300 hover:bg-white hover:text-[var(--color-ink)] sm:px-7 sm:py-5 sm:text-base"
               >
                 <span className="relative flex h-7 w-7 items-center justify-center">
                   <span className="absolute h-5 w-5 rounded-full border border-white/35 transition group-hover:border-black/25" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white transition group-hover:bg-[#111111]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-white transition group-hover:bg-[var(--color-ink)]" />
                 </span>
                 Explore Our Homes
               </a>

@@ -27,48 +27,41 @@ const apartments = [
 
 const CompletedProjects = () => {
   return (
-    <section className="bg-[#f7f7f5] py-20">
+    <section className="bg-[var(--color-surface)] py-20">
       <div className="mx-auto max-w-7xl px-4">
-        
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm mb-6">
-            <span className="w-2 h-2 bg-[#a6a04a] rounded-full"></span>
+        <div className="mb-16 text-center">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-4 py-2 text-sm">
+            <span className="h-2 w-2 rounded-full bg-[var(--color-brand)]"></span>
             Our Apartments
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-semibold 2xl:px-32 px-0">
+          <h2 className="px-0 text-4xl font-semibold text-[var(--color-ink)] md:text-6xl 2xl:px-32">
             Discover apartments crafted for comfortable urban living
           </h2>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {apartments.map((item) => (
-            <div key={item.id} className="relative rounded-3xl overflow-hidden group h-[600px]">
-
-              {/* Image */}
+            <div key={item.id} className="group relative h-[600px] overflow-hidden rounded-3xl">
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-              {/* Content */}
-              <div className="relative h-full flex items-end p-6 text-white">
+              <div className="relative flex h-full items-end p-6 text-white">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
+                  <h3 className="mb-3 text-2xl font-semibold">{item.title}</h3>
                   <p className="mb-5 text-white/90">{item.description}</p>
 
-                  <div className="border-t border-white/20 mb-5"></div>
+                  <div className="mb-5 border-t border-white/20"></div>
 
                   <ul className="space-y-3">
                     {item.features.map((f, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <span className="bg-[#a6a04a] rounded-full p-1 text-black">
+                        <span className="rounded-full bg-[var(--color-brand)] p-1 text-black">
                           <Check size={14} />
                         </span>
                         {f}
@@ -77,32 +70,29 @@ const CompletedProjects = () => {
                   </ul>
                 </div>
               </div>
-
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-14 flex items-center justify-center gap-4 flex-wrap text-center">
+        <div className="mt-14 flex flex-wrap items-center justify-center gap-4 text-center">
           <div className="flex -space-x-2">
             <img
               src="images/author-1.jpg"
               alt="author"
-              className="w-10 h-10 rounded-full border-2 border-white"
+              className="h-10 w-10 rounded-full border-2 border-white"
             />
-            <div className="w-10 h-10 rounded-full bg-[#a6a04a] flex items-center justify-center border-2 border-white">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-[var(--color-brand)]">
               <Phone size={16} />
             </div>
           </div>
 
           <p className="text-lg">
-            Let’s make something great work together.{" "}
-            <a href="/contact" className="text-[#a6a04a] font-semibold underline">
+            Let's make something great work together.{" "}
+            <a href="/contact" className="font-semibold text-[var(--color-brand)] underline">
               Get Free Quote.
             </a>
           </p>
         </div>
-
       </div>
     </section>
   );
