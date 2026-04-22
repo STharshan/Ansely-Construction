@@ -30,7 +30,7 @@ const points = [
 
 export default function WhyChoose() {
   return (
-    <section className="bg-[var(--color-panel)] px-4 py-8 md:px-6 md:py-10">
+    <section id="whyus" className="bg-[var(--color-panel)] px-4 py-8 md:px-6 md:py-10">
       <div
         className="relative overflow-hidden rounded-[28px] bg-[var(--color-ink)] px-5 pb-0 pt-12 sm:px-8 md:px-12 md:pt-16 lg:px-16"
         style={{

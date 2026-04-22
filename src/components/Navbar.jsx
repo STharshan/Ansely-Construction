@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const menuItems = [
-  { label: "Home", hasDropdown: true },
-  { label: "Our Process" }, // Renamed for construction context
-  { label: "Projects" },
-  { label: "Land Sourcing" },
-  { label: "Pages", hasDropdown: true },
-  { label: "Contact Us" },
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Why Choose Us", path: "/#whyus" },
+  { label: "Contact Us", path: "/#contact" },
 ];
 
 function LogoMark() {
@@ -38,57 +37,64 @@ export default function Navbar({ variant = "transparent" }) {
     >
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 md:px-10 lg:px-8">
         <div className="flex items-center justify-between gap-4 pb-8">
-          {/* Brand Logo */}
-          <div className="flex items-center gap-3">
+
+          {/* LOGO */}
+          <Link to="/" className="flex items-center gap-3">
             <LogoMark />
             <div className="text-2xl font-semibold tracking-[-0.03em]">
-              Euro<span className="font-['Cormorant_Garamond'] italic font-medium">Builders</span>
+              Euro
+              <span className="font-['Cormorant_Garamond'] italic font-medium">
+                Builders
+              </span>
               <span className="text-[var(--color-brand)]">.</span>
             </div>
-          </div>
+          </Link>
 
-          {/* Desktop Navigation */}
+          {/* DESKTOP MENU */}
           <ul className="hidden items-center gap-8 text-[15px] font-medium lg:flex xl:gap-10">
             {menuItems.map((item) => (
-              <li
-                key={item.label}
-                className={`flex cursor-pointer items-center gap-1 transition hover:text-[var(--color-brand)] ${
-                  isSolid ? "text-[color:rgba(31,31,27,0.9)]" : "text-white/95"
-                }`}
-              >
-                <span>{item.label}</span>
-                {item.hasDropdown && <ChevronDown size={14} strokeWidth={2.5} />}
+              <li key={item.label}>
+                <Link
+                  to={item.path}
+                  className={`flex items-center gap-1 transition hover:text-[var(--color-brand)] ${
+                    isSolid
+                      ? "text-[color:rgba(31,31,27,0.9)]"
+                      : "text-white/95"
+                  }`}
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
 
-          {/* Action Buttons */}
+          {/* RIGHT SIDE */}
           <div className="flex items-center gap-3">
-            {/* Nav CTA - sticky button linking to contact */}
-            <a 
-              href="#contact"
-              rel="noopener"
-              className="group hidden items-center gap-2 rounded-lg bg-[var(--color-brand)] px-5 py-3 text-sm font-semibold text-[var(--color-white)] transition hover:bg-[var(--color-brand-hover)] md:inline-flex"
+
+            {/* CTA */}
+            <Link
+              to="/#contact"
+              className="group hidden items-center gap-2 rounded-lg bg-[var(--color-brand)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--color-brand-hover)] md:inline-flex"
             >
               Get a Free Consultation
               <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+            </Link>
 
+            {/* MOBILE BUTTON */}
             <button
-              onClick={() => setOpen((value) => !value)}
+              onClick={() => setOpen(!open)}
               className={`inline-flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur-md lg:hidden ${
                 isSolid
                   ? "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-ink-soft)]"
                   : "border-white/15 bg-white/10"
               }`}
-              aria-label="Toggle navigation menu"
             >
               {open ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* MOBILE MENU */}
         {open && (
           <div
             className={`mt-4 rounded-[28px] border p-5 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl lg:hidden ${
@@ -99,26 +105,30 @@ export default function Navbar({ variant = "transparent" }) {
           >
             <ul className="flex flex-col gap-3 text-base font-medium">
               {menuItems.map((item) => (
-                <li
-                  key={item.label}
-                  className={`flex items-center justify-between rounded-2xl border px-5 py-3.5 ${
-                    isSolid ? "border-[var(--color-border)] text-[var(--color-ink-soft)]" : "border-white/10 text-white/90"
-                  }`}
-                >
-                  <span>{item.label}</span>
-                  {item.hasDropdown && <ChevronDown size={16} strokeWidth={2.3} />}
+                <li key={item.label}>
+                  <Link
+                    to={item.path}
+                    onClick={() => setOpen(false)}
+                    className={`flex items-center justify-between rounded-2xl border px-5 py-3.5 ${
+                      isSolid
+                        ? "border-[var(--color-border)] text-[var(--color-ink-soft)]"
+                        : "border-white/10 text-white/90"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
 
-            <a 
-              href="#contact"
-              rel="noopener"
-              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--color-brand)] px-5 py-4 text-sm font-semibold text-[var(--color-white)]"
+            <Link
+              to="/#contact"
+              onClick={() => setOpen(false)}
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--color-brand)] px-5 py-4 text-sm font-semibold text-white"
             >
               Get a Free Consultation
               <ArrowUpRight size={16} />
-            </a>
+            </Link>
           </div>
         )}
       </div>
