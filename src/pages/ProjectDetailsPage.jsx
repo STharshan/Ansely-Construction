@@ -1,6 +1,5 @@
 import { Navigate, useParams } from "react-router-dom";
 import ProjectFooter from "../components/common/project/ProjectFooter";
-import ProjectHero from "../components/common/project/ProjectHero";
 import RelatedProjects from "../components/common/project/RelatedProjects";
 import ProjectStorySection from "../components/common/project/ProjectStorySection";
 import { projectsBySlug } from "../data/project";
@@ -15,7 +14,6 @@ export default function ProjectDetailsPage() {
 
   return (
     <main className="bg-[#fbfaf7]">
-      <ProjectHero hero={project.hero} />
       <ProjectStorySection
         hero={project.hero}
         overview={project.overview}
