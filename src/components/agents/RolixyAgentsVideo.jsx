@@ -70,7 +70,7 @@ export default function RolixyAgentsVideo({ video }) {
               initial="hidden"
               animate="visible"
               variants={titleVariants}
-              className="text-[50px] font-semibold leading-[1.08] tracking-[-0.03em] text-white sm:text-[72px]"
+              className="font-inter text-[30px] font-medium leading-[39px] tracking-normal text-white sm:text-[44px] sm:leading-[57.2px]"
             >
               {title.split(" ").map((word, wordIndex) => (
                 <span key={`${word}-${wordIndex}`} className="mr-[0.22em] inline-block whitespace-nowrap">
@@ -86,7 +86,9 @@ export default function RolixyAgentsVideo({ video }) {
                 </span>
               ))}
             </motion.h2>
-            <p className="mt-3 text-[20px] font-medium text-white/90 sm:text-[32px]">{video.subtitle}</p>
+            <p className="font-inter mt-3 text-[18px] font-normal leading-[27px] text-white sm:text-[20px] sm:leading-[30px]">
+              {video.subtitle}
+            </p>
           </div>
         </div>
       </div>
