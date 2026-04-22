@@ -34,60 +34,6 @@ export const johnCarterProfile = {
       "Quisque euismod posuere lacus sit amet volutpat.",
     ],
   },
-  properties: {
-    eyebrow: "All properties",
-    title: "Properties in charge of John Carter",
-    actionLabel: "Browse all properties",
-    items: [
-      {
-        type: "For sale",
-        title: "Apartment in Downtown, San Diego",
-        location: "90071, South Grand Avenue, SD",
-        ctaLabel: "Contact agent",
-        specs: [
-          { label: "1,334 sqft", type: "area" },
-          { label: "5", type: "bath" },
-          { label: "5", type: "bed" },
-          { label: "6", type: "parking" },
-        ],
-        image:
-          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-      },
-    ],
-  },
-  articles: {
-    eyebrow: "Our blog",
-    title: "Articles by John Carter",
-    actionLabel: "Browse all articles",
-    items: [
-      {
-        category: "Resources",
-        title: "Here's how decorate your new home from scratch",
-        date: "Mar 7, 2024",
-        image:
-          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-      },
-      {
-        category: "Articles",
-        title: "First-time homebuyer's guide: Steps for beginners",
-        date: "Mar 7, 2024",
-        image:
-          "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
-      },
-    ],
-  },
-  ctaCards: [
-    {
-      title: "Post a free property",
-      description:
-        "Lorem ipsum dolor sit amet consectetur vitae aenean amet in eros neque nulla mattis sit.",
-    },
-    {
-      title: "Post a paid property",
-      description:
-        "Lorem ipsum dolor sit amet consectetur vitae aenean amet in eros neque nulla mattis sit.",
-    },
-  ],
 };
 
 export const peterEndoProfile = {
@@ -126,60 +72,6 @@ export const peterEndoProfile = {
       "Built long-term client networks through referral-first service.",
     ],
   },
-  properties: {
-    eyebrow: "All properties",
-    title: "Properties in charge of Peter Endo",
-    actionLabel: "Browse all properties",
-    items: [
-      {
-        type: "For sale",
-        title: "Modern Loft in West Hollywood",
-        location: "90046, Sunset Boulevard, LA",
-        ctaLabel: "Contact agent",
-        specs: [
-          { label: "1,120 sqft", type: "area" },
-          { label: "2", type: "bath" },
-          { label: "2", type: "bed" },
-          { label: "2", type: "parking" },
-        ],
-        image:
-          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80",
-      },
-    ],
-  },
-  articles: {
-    eyebrow: "Our blog",
-    title: "Articles by Peter Endo",
-    actionLabel: "Browse all articles",
-    items: [
-      {
-        category: "Resources",
-        title: "How to evaluate neighborhood value before you buy",
-        date: "Apr 11, 2024",
-        image:
-          "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-      },
-      {
-        category: "Articles",
-        title: "Smart negotiation tactics for competitive housing markets",
-        date: "Apr 3, 2024",
-        image:
-          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-      },
-    ],
-  },
-  ctaCards: [
-    {
-      title: "Post a free property",
-      description:
-        "Get your property live quickly and reach motivated buyers with Peter Endo's trusted local audience.",
-    },
-    {
-      title: "Post a paid property",
-      description:
-        "Promote premium listings with featured placement and attract serious, ready-to-close buyers.",
-    },
-  ],
 };
 
 export const agents = [
