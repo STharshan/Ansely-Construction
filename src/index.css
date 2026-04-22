@@ -2,10 +2,11 @@
 @import "tailwindcss";
 
 :root {
+  --font-objectivity: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   color: #0f172a;
   background: #f7f7f4;
-  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: var(--font-objectivity);
 }
 
 body {
@@ -19,6 +20,10 @@ input,
 textarea,
 select {
   font-family: inherit;
+}
+
+.font-objectivity {
+  font-family: var(--font-objectivity);
 }
 
 * {
