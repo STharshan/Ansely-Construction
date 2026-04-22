@@ -6,21 +6,21 @@ const processImage =
 const steps = [
   {
     number: "01",
-    title: "Project Consultation",
+    title: "Initial Consultation",
     description:
-      "We begin by understanding your vision, budget, location needs, and timeline before shaping the right build strategy.",
+      "We discuss your vision and budget to align on requirements, whether you already own land or need us to find the perfect plot.",
   },
   {
     number: "02",
-    title: "Planning & Execution",
+    title: "Design & Planning",
     description:
-      "Our team aligns design, approvals, materials, and site coordination to keep every stage organized and efficient.",
+      "Our architects create bespoke plans tailored to your lifestyle and budget, ensuring every detail reflects your personal aesthetic and functional needs.",
   },
   {
     number: "03",
-    title: "Delivery & Support",
+    title: "Full Build & Handover",
     description:
-      "We complete the project with quality checks, final detailing, and ongoing support so you move forward with confidence.",
+      "We manage the entire construction process in Sri Lanka, providing regular updates until we hand over the keys to your new home.",
   },
 ];
 
@@ -30,8 +30,9 @@ export default function HowWeWork() {
       <div className="mx-auto max-w-[1320px]">
         <div className="rounded-[28px] bg-white px-5 py-8 shadow-[0_24px_60px_rgba(24,32,48,0.14)] sm:px-8 sm:py-10 lg:rounded-[34px] lg:px-12 lg:py-12">
           <div className="mx-auto max-w-[980px]">
+            {/* H2 Heading with requested span class */}
             <h2 className="text-center text-[2rem] font-semibold tracking-[-0.05em] text-[#20356f] sm:text-[2.4rem] lg:text-[2.8rem]">
-              How We <span className="font-serif italic font-medium">Work</span>
+              How We <span className="accent-font italic">Build </span> Your Home
             </h2>
 
             <div className="mt-6 overflow-hidden rounded-[24px] sm:mt-8 lg:mt-10">
@@ -42,9 +43,14 @@ export default function HowWeWork() {
               />
             </div>
 
+            {/* Desktop Layout */}
             <div className="mt-10 hidden md:block">
               <div className="relative grid grid-cols-3 gap-6">
-                <div className="absolute left-[16.66%] right-[16.66%] top-7 h-[2px] bg-[#32498e]" />
+                {/* Decorative Timeline Connector */}
+                <div 
+                  className="absolute left-[16.66%] right-[16.66%] top-7 h-[2px] bg-[#32498e]" 
+                  aria-hidden="true"
+                />
 
                 {steps.map((step, index) => {
                   const active = index === 1;
@@ -54,6 +60,7 @@ export default function HowWeWork() {
                       key={step.number}
                       className="relative z-10 flex flex-col items-center text-center"
                     >
+                      {/* Step Number styled in circle div */}
                       <div
                         className={`flex h-14 w-14 items-center justify-center rounded-full border text-lg font-semibold ${
                           active
@@ -61,7 +68,7 @@ export default function HowWeWork() {
                             : "border-[#32498e] bg-white text-[#20356f]"
                         }`}
                       >
-                        {step.number}
+                        <span>{step.number}</span>
                       </div>
 
                       <h3 className="mt-5 text-[1.02rem] font-semibold text-[#1d2b57]">
@@ -77,6 +84,7 @@ export default function HowWeWork() {
               </div>
             </div>
 
+            {/* Mobile Layout */}
             <div className="mt-8 space-y-5 md:hidden">
               {steps.map((step, index) => {
                 const active = index === 1;
@@ -86,11 +94,16 @@ export default function HowWeWork() {
                     key={step.number}
                     className="relative rounded-[22px] border border-[#d9dfef] bg-[#f8f9fd] px-5 py-5"
                   >
+                    {/* Decorative Vertical Line */}
                     {index !== steps.length - 1 && (
-                      <div className="absolute bottom-[-22px] left-7 top-[68px] w-px bg-[#32498e]/25" />
+                      <div 
+                        className="absolute bottom-[-22px] left-7 top-[68px] w-px bg-[#32498e]/25" 
+                        aria-hidden="true"
+                      />
                     )}
 
                     <div className="flex items-start gap-4">
+                      {/* Step Number styled in circle div */}
                       <div
                         className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border text-base font-semibold ${
                           active
@@ -98,7 +111,7 @@ export default function HowWeWork() {
                             : "border-[#32498e] bg-white text-[#20356f]"
                         }`}
                       >
-                        {step.number}
+                        <span>{step.number}</span>
                       </div>
 
                       <div>
@@ -117,12 +130,15 @@ export default function HowWeWork() {
             </div>
 
             <div className="mt-9 flex justify-center sm:mt-10">
-              <button className="inline-flex items-center gap-3 rounded-full bg-[#32498e] px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-[0_14px_28px_rgba(50,73,142,0.28)] transition hover:bg-[#273b77]">
-                Explore Our Process
+              <a 
+                href="/contact"
+                className="inline-flex items-center gap-3 rounded-full bg-[#32498e] px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-[0_14px_28px_rgba(50,73,142,0.28)] transition hover:bg-[#273b77]"
+              >
+                Start Your Build Today
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#32498e]">
                   <ArrowUpRight size={16} />
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>

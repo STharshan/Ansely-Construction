@@ -1,30 +1,30 @@
 import React from "react";
-import { Cog, Globe2, MapPin, Sparkles } from "lucide-react";
+import { ShieldCheck, HardHat, PencilRuler, Trophy } from "lucide-react";
 
 const points = [
   {
-    title: "Prime Location Advantage",
+    title: "UK-Based, Fully Accountable",
     description:
-      "Each apartment is designed to maximize space and natural light.",
-    icon: MapPin,
+      "Benefit from European standards and clear contracts. Based in the UK, we offer full accountability and total peace of mind for your investment.",
+    icon: ShieldCheck,
   },
   {
-    title: "Construction Perfected",
+    title: "End-to-End Build Management",
     description:
-      "Each apartment is designed to maximize space and natural light.",
-    icon: Sparkles,
+      "From land sourcing to final handover, we manage every detail. You’ll never have to coordinate across time zones or chase local contractors yourself.",
+    icon: HardHat,
   },
   {
-    title: "Carefully Planned Home",
+    title: "Bespoke Design, Built Around You",
     description:
-      "Each apartment is designed to maximize space and natural light.",
-    icon: Cog,
+      "Every project is designed from scratch to match your vision and budget. No generic templates—just high-quality architecture tailored to your unique lifestyle.",
+    icon: PencilRuler,
   },
   {
-    title: "Modern Lifestyle Amenity",
+    title: "100+ Builds. Proven Track Record.",
     description:
-      "Each apartment is designed to maximize space and natural light.",
-    icon: Globe2,
+      "With over 100 completed homes and hotels across Sri Lanka, we have the local expertise to deliver projects to the highest international standards.",
+    icon: Trophy,
   },
 ];
 
@@ -41,30 +41,36 @@ export default function WhyChoose() {
       >
         <div className="mx-auto max-w-[1360px] p-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90">
+            {/* Eyebrow tag as a styled span */}
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white">
               <span className="h-2 w-2 rounded-full bg-[#a6a04a]" />
               Why Choose Us
-            </div>
-            <h2 className="mx-auto mt-6 max-w-4xl text-3xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-[68px]">
-              Why our property combines location and lifestyle
+            </span>
+            
+            {/* Main heading with accent font span */}
+            <h2 className="mx-auto mt-6 max-w-4xl text-3xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-[64px]">
+              Why Families and Investors <span className="accent-font italic">Choose</span> Euro Builders
             </h2>
           </div>
 
-          <div className="mt-14 grid items-end gap-8 lg:mt-16 lg:grid-cols-[300px_minmax(520px,640px)_300px] lg:gap-8">
+          <div className="mt-14 grid items-end gap-8 lg:mt-16 lg:grid-cols-[320px_1fr_320px] lg:gap-8">
+            {/* Left Column */}
             <div className="grid gap-6">
               {points.slice(0, 2).map((item) => (
                 <FeatureCard key={item.title} item={item} />
               ))}
             </div>
 
-            <div className="relative mx-auto flex w-full max-w-[640px] items-end justify-center ]">
+            {/* Centre Image */}
+            <div className="relative mx-auto flex w-full max-w-[600px] items-end justify-center">
               <img
-                src="https://html.awaikenthemes.com/antila/images/why-choose-image-prime.png"
-                alt="Modern apartment building"
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
+                alt="Custom home built in Sri Lanka by Euro Builders"
                 className="w-full object-contain"
               />
             </div>
 
+            {/* Right Column */}
             <div className="grid gap-6">
               {points.slice(2, 4).map((item) => (
                 <FeatureCard key={item.title} item={item} />
@@ -81,14 +87,16 @@ function FeatureCard({ item }) {
   const Icon = item.icon;
 
   return (
-    <article className="rounded-[24px] border border-white/10 bg-white/12 px-7 pb-7 pt-6 text-white backdrop-blur-[1px] lg:min-h-[280px]">
-      <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#a6a04a] text-[#151515]">
-        <Icon size={22} />
+    <article className="rounded-[24px] border border-white/15 bg-white/5 px-7 pb-8 pt-7 text-white backdrop-blur-md lg:min-h-[300px]">
+      <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#a6a04a] text-[#151515]">
+        <Icon size={24} />
       </div>
-      <h3 className="text-[40px] font-semibold leading-[1.1] tracking-[-0.02em] sm:text-[32px] lg:text-[46px]">
+      {/* Card title H3 */}
+      <h3 className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl lg:text-[28px]">
         {item.title}
       </h3>
-      <p className="mt-5 text-[15px] leading-[1.55] text-white/85 sm:text-lg">
+      {/* Card description P - text-white/80 for WCAG AA contrast on dark backgrounds */}
+      <p className="mt-4 text-[15px] leading-relaxed text-white/80">
         {item.description}
       </p>
     </article>

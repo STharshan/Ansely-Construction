@@ -3,9 +3,9 @@ import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 
 const menuItems = [
   { label: "Home", hasDropdown: true },
-  { label: "About Us" },
-  { label: "Amenities" },
-  { label: "Blog" },
+  { label: "Our Process" }, // Renamed for construction context
+  { label: "Projects" },
+  { label: "Land Sourcing" },
   { label: "Pages", hasDropdown: true },
   { label: "Contact Us" },
 ];
@@ -30,7 +30,7 @@ export default function Navbar({ variant = "transparent" }) {
 
   return (
     <header
-      className={`inset-x-0 top-0 z-30 p-6 ${
+      className={`inset-x-0 top-0 z-30 p-6 font-['DM_Sans',_sans-serif] ${
         isSolid
           ? "relative border-b border-[#e8dfd5] bg-white text-[#2d2019] shadow-sm"
           : "absolute text-white"
@@ -38,13 +38,16 @@ export default function Navbar({ variant = "transparent" }) {
     >
       <div className="mx-auto max-w-7xl px-4 pt-5 sm:px-6 md:px-10 lg:px-8">
         <div className="flex items-center justify-between gap-4 pb-8">
+          {/* Brand Logo */}
           <div className="flex items-center gap-3">
             <LogoMark />
             <div className="text-2xl font-semibold tracking-[-0.03em]">
-              Antila<span className="text-[#b2b15c]">.</span>
+              Euro<span className="font-['Cormorant_Garamond'] italic font-medium">Builders</span>
+              <span className="text-[#b2b15c]">.</span>
             </div>
           </div>
 
+          {/* Desktop Navigation */}
           <ul className="hidden items-center gap-8 text-[15px] font-medium lg:flex xl:gap-10">
             {menuItems.map((item) => (
               <li
@@ -54,16 +57,22 @@ export default function Navbar({ variant = "transparent" }) {
                 }`}
               >
                 <span>{item.label}</span>
-                {item.hasDropdown && <ChevronDown size={15} strokeWidth={2.3} />}
+                {item.hasDropdown && <ChevronDown size={14} strokeWidth={2.5} />}
               </li>
             ))}
           </ul>
 
+          {/* Action Buttons */}
           <div className="flex items-center gap-3">
-            <button className="hidden items-center gap-2 rounded-lg bg-[#b2b15c] px-5 py-3 text-sm font-semibold text-[#f7f6ed] transition hover:bg-[#c4c370] md:inline-flex">
-              Contact Now
-              <ArrowUpRight size={17} />
-            </button>
+            {/* Nav CTA - sticky button linking to contact */}
+            <a 
+              href="#contact"
+              rel="noopener"
+              className="hidden items-center gap-2 rounded-lg bg-[#b2b15c] px-5 py-3 text-sm font-semibold text-[#f7f6ed] transition hover:bg-[#c4c370] md:inline-flex group"
+            >
+              Get a Free Consultation
+              <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
 
             <button
               onClick={() => setOpen((value) => !value)}
@@ -77,19 +86,20 @@ export default function Navbar({ variant = "transparent" }) {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         {open && (
           <div
             className={`mt-4 rounded-[28px] border p-5 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl lg:hidden ${
               isSolid
                 ? "border-[#e8dfd5] bg-white"
-                : "border-white/10 bg-[rgba(20,25,31,0.9)]"
+                : "border-white/10 bg-[rgba(20,25,31,0.95)]"
             }`}
           >
-            <ul className="flex flex-col gap-4 text-base font-medium">
+            <ul className="flex flex-col gap-3 text-base font-medium">
               {menuItems.map((item) => (
                 <li
                   key={item.label}
-                  className={`flex items-center justify-between rounded-2xl border px-4 py-3 ${
+                  className={`flex items-center justify-between rounded-2xl border px-5 py-3.5 ${
                     isSolid ? "border-[#e8dfd5] text-[#2d2019]" : "border-white/10 text-white/90"
                   }`}
                 >
@@ -99,10 +109,14 @@ export default function Navbar({ variant = "transparent" }) {
               ))}
             </ul>
 
-            <button className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#b2b15c] px-5 py-4 text-sm font-semibold text-[#f7f6ed]">
-              Contact Now
+            <a 
+              href="#contact"
+              rel="noopener"
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#b2b15c] px-5 py-4 text-sm font-semibold text-[#f7f6ed]"
+            >
+              Get a Free Consultation
               <ArrowUpRight size={16} />
-            </button>
+            </a>
           </div>
         )}
       </div>
