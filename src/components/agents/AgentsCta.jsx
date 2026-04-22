@@ -1,6 +1,16 @@
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function AgentsCta() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle");
+  const [message, setMessage] = useState("");
+
+  const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const headingLines = ["Are You Currently Working", "on a Project? Let’s Talk!"];
 
   const headingVariants = {
@@ -23,6 +33,46 @@ export default function AgentsCta() {
         ease: [0.25, 0.1, 0.25, 1],
       },
     },
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!email.trim()) {
+      setStatus("error");
+      setMessage("Please enter your email address.");
+      return;
+    }
+
+    if (!emailJsServiceId || !emailJsTemplateId || !emailJsPublicKey) {
+      setStatus("error");
+      setMessage("Email service is not configured yet.");
+      return;
+    }
+
+    try {
+      setStatus("loading");
+      setMessage("");
+
+      await emailjs.send(
+        emailJsServiceId,
+        emailJsTemplateId,
+        {
+          user_email: email.trim(),
+          source: "Agents CTA",
+        },
+        {
+          publicKey: emailJsPublicKey,
+        },
+      );
+
+      setEmail("");
+      setStatus("success");
+      setMessage("Thank you! We'll keep you updated.");
+    } catch (error) {
+      setStatus("error");
+      setMessage("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -73,21 +123,34 @@ export default function AgentsCta() {
             information.
           </p>
 
-          <form className="mt-10 w-full max-w-[500px]">
+          <form className="mt-10 w-full max-w-[500px]" onSubmit={handleSubmit}>
             <div className="relative">
               <input
                 type="email"
+                name="user_email"
                 placeholder="Your email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
                 className="font-inter relative z-[2] block h-[56px] min-h-[56px] w-full rounded-[100px] border border-black/35 bg-white px-5 py-3 pr-[150px] text-[16px] font-medium leading-5 text-[#0a0a0a] placeholder:font-medium placeholder:text-[#1f1f1f] outline-none sm:pr-[170px]"
               />
 
               <button
-                type="button"
-                className="font-inter absolute right-[4px] top-1/2 z-[3] h-[48px] w-[128px] -translate-y-1/2 rounded-[100px] bg-[#5a1a0c] text-[16px] font-semibold leading-5 text-white transition duration-300 hover:bg-[#6d1f0c]"
+                type="submit"
+                disabled={status === "loading"}
+                className="font-inter absolute right-[4px] top-1/2 z-[3] h-[48px] w-[128px] -translate-y-1/2 rounded-[100px] bg-[#5a1a0c] text-[16px] font-semibold leading-5 text-white transition duration-300 hover:bg-[#6d1f0c] disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Join Now
+                {status === "loading" ? "Sending" : "Join Now"}
               </button>
             </div>
+            {message && (
+              <p
+                className={`font-inter mt-4 text-center text-[14px] font-medium leading-5 ${
+                  status === "success" ? "text-white" : "text-[#ffd7d7]"
+                }`}
+              >
+                {message}
+              </p>
+            )}
           </form>
         </div>
       </div>
