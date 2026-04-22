@@ -1,9 +1,33 @@
 import { Pause, Play } from "lucide-react";
+import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
 export default function RolixyAgentsVideo({ video }) {
   const videoRef = useRef(null);
   const [playing, setPlaying] = useState(true);
+  const title = video.title || "";
+
+  const titleVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.06,
+        delayChildren: 0.25,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 22 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.55,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  };
 
   const togglePlayback = () => {
     if (!videoRef.current) return;
@@ -42,9 +66,26 @@ export default function RolixyAgentsVideo({ video }) {
           </button>
 
           <div className="absolute bottom-10 left-6 right-36 sm:bottom-12 sm:left-10">
-            <h2 className="text-[50px] font-semibold leading-[1.08] tracking-[-0.03em] text-white sm:text-[72px]">
-              {video.title}
-            </h2>
+            <motion.h2
+              initial="hidden"
+              animate="visible"
+              variants={titleVariants}
+              className="text-[50px] font-semibold leading-[1.08] tracking-[-0.03em] text-white sm:text-[72px]"
+            >
+              {title.split(" ").map((word, wordIndex) => (
+                <span key={`${word}-${wordIndex}`} className="mr-[0.22em] inline-block whitespace-nowrap">
+                  {word.split("").map((letter, letterIndex) => (
+                    <motion.span
+                      key={`${letter}-${wordIndex}-${letterIndex}`}
+                      variants={letterVariants}
+                      className="inline-block"
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                </span>
+              ))}
+            </motion.h2>
             <p className="mt-3 text-[20px] font-medium text-white/90 sm:text-[32px]">{video.subtitle}</p>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function RolixyAgentsGrid({ agents }) {
+  const headingText = "Meet Our Expert Agents";
   
   // Title Animation
   const titleVariants = {
@@ -11,6 +12,28 @@ export default function RolixyAgentsGrid({ agents }) {
       y: 0, 
       transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } 
     }
+  };
+
+  const headingVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.055,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const headingLetterVariants = {
+    hidden: { opacity: 0, y: 18 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.45,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
   };
 
   // Video-வில் உள்ளது போன்ற Image Reveal Animation
@@ -63,10 +86,18 @@ export default function RolixyAgentsGrid({ agents }) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={titleVariants}
+            variants={headingVariants}
             className="mt-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-[#2d2019] sm:text-[62px]"
           >
-            Meet Our Expert Agents
+            {headingText.split("").map((letter, index) => (
+              <motion.span
+                key={`${letter}-${index}`}
+                variants={headingLetterVariants}
+                className="inline-block"
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </motion.span>
+            ))}
           </motion.h1>
         </div>
 
