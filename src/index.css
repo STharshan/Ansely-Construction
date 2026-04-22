@@ -1,21 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
-   
-          @keyframes textReveal {
-            0% { opacity:0; transform: translateY(120%); }
-            100% { opacity:1; transform: translateY(0); }
-          }
+:root {
+  --font-objectivity: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-geist: "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #0f172a;
+  background: #f7f7f4;
+  font-family: var(--font-objectivity);
+}
 
-          @keyframes fadeUp {
-            0% { opacity:0; transform: translateY(20px); }
-            100% { opacity:1; transform: translateY(0); }
-          }
+body {
+  margin: 0;
+  background: #f7f7f4;
+}
 
-          .animate-textReveal {
-            animation: textReveal 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
-          }
+body,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
 
-          .animate-fadeUp {
-            animation: fadeUp 0.8s ease forwards;
-          }
-        
+.font-objectivity {
+  font-family: var(--font-objectivity);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-geist {
+  font-family: var(--font-geist);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(120%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-textReveal {
+  animation: textReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.project-reveal {
+  opacity: 0;
+  transform: translateY(42px) scale(0.98);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.project-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

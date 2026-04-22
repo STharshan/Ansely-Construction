@@ -14,7 +14,7 @@ const VideoSection = () => {
             <img 
               src="https://cdn.prod.website-files.com/693e9d1043906400d3af572d/694534185fedad46d2ee80e3_ChatGPT%20Image%2019%20%D0%B3%D1%80%D1%83%D0%B4.%202025%20%D1%80.%2C%2013_16_34.webp" 
               alt="Modern Modular Home Construction"
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="w-full h-200 object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
           </div>
 

@@ -42,8 +42,8 @@ export default function Testimonial() {
   };
 
   return (
-    <section className="bg-white py-14 sm:py-16 lg:py-20">
-        <div className="relative overflow-hidden">
+    <section className="bg-white py-14 sm:py-16">
+        <div className="relative overflow-hidden h-200">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -51,13 +51,13 @@ export default function Testimonial() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,31,40,0.28)_0%,rgba(25,35,46,0.12)_42%,rgba(19,24,31,0.4)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,24,30,0.08)_0%,rgba(14,18,23,0.2)_100%)]" />
 
-          <div className="relative z-10 min-h-[560px] px-4 py-6 sm:px-6 sm:py-8 lg:min-h-[660px] lg:px-8 lg:py-10">
-            <div className="max-w-[520px] rounded-[28px] bg-[rgba(244,246,248,0.92)] p-6 shadow-[0_25px_70px_rgba(15,20,30,0.18)] backdrop-blur-md sm:p-8 lg:ml-8 lg:mt-6 lg:p-10">
+          <div className="relative z-10 px-4 mt-15 py-6 sm:px-16 sm:py-8 ">
+            <div className="max-w-[580px] bg-[rgba(244,246,248,0.92)] p-6 shadow-[0_25px_70px_rgba(15,20,30,0.18)] backdrop-blur-md sm:p-8 lg:ml-8 lg:mt-6 lg:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#171717] sm:text-sm">
                 Trusted By Homeowners
               </p>
 
-              <div className="mt-14 flex items-center gap-1 text-[#111111]">
+              <div className="mt-34 flex items-center gap-1 text-[#111111]">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star
                     key={index}
@@ -68,13 +68,13 @@ export default function Testimonial() {
                 ))}
               </div>
 
-              <blockquote className="mt-7 text-[1.9rem] font-medium leading-[1.06] tracking-[-0.05em] text-[#161616] sm:text-[2.2rem] lg:text-[2.65rem]">
+              <blockquote className="mt-7 text-[1.9rem] font-medium leading-[1.06] tracking-[-0.05em] text-[#161616] sm:text-[2rem]">
                 &ldquo;{activeTestimonial.quote}&rdquo;
               </blockquote>
 
               <div className="mt-10 flex flex-col gap-8 border-t border-black/8 pt-6 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <p className="text-[1.45rem] font-medium tracking-[-0.03em] text-[#171717]">
+                  <p className="text-[1.15rem] font-medium tracking-[-0.03em] text-[#171717]">
                     {activeTestimonial.name}
                   </p>
                   <p className="mt-1 text-base text-[#6a7280]">
