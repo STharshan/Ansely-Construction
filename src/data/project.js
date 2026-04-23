@@ -416,3 +416,14 @@ export const projects = [
 export const projectsBySlug = Object.fromEntries(
   projects.map((project) => [project.slug, project]),
 );
+
+export const completedProjects = projects.map((project) => ({
+  id: project.slug,
+  slug: project.slug,
+  title: project.hero.title,
+  description: project.hero.description,
+  image: project.hero.image,
+  features: project.details
+    .filter((detail) => ["Location", "Type"].includes(detail.label))
+    .map((detail) => `${detail.label}: ${detail.value}`),
+}));
