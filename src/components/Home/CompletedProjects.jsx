@@ -28,6 +28,7 @@ const CompletedProjects = () => {
               <img
                 src={item.image}
                 alt={item.title}
+                loading="lazy" 
                 className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
 
@@ -61,6 +62,7 @@ const CompletedProjects = () => {
             <img
               src="/author-1.jpg"
               alt="author"
+              loading="lazy" 
               className="h-10 w-10 rounded-full border-2 border-white"
             />
             <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-[var(--color-brand)]">

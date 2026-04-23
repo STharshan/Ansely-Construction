@@ -44,6 +44,7 @@ export default function ProjectStorySection({
               <img
                 src={hero.image}
                 alt={hero.title}
+                loading="lazy"
                 className="h-[220px] w-full object-cover sm:h-[400px] lg:h-[420px]"
               />
             </div>
@@ -84,6 +85,7 @@ export default function ProjectStorySection({
                     <img
                       src={image.src}
                       alt={image.alt}
+                      loading="lazy"
                       className="h-[16rem] w-full object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:opacity-80 sm:h-[18rem] lg:h-[20rem]"
                     />
                   </button>
@@ -134,6 +136,7 @@ export default function ProjectStorySection({
             <img
               src={activeImage.src}
               alt={activeImage.alt}
+              loading="lazy"
               className="max-h-[78vh] w-full max-w-[1300px] object-contain"
             />
 
@@ -150,7 +153,7 @@ export default function ProjectStorySection({
                       : "border-transparent opacity-55 hover:opacity-85"
                   }`}
                 >
-                  <img src={image.src} alt="" className="h-full w-full object-cover" />
+                  <img src={image.src} alt="ProjectStory"  loading="lazy" className="h-full w-full object-cover" />
                 </button>
               ))}
             </div>

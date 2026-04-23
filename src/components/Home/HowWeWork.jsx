@@ -37,6 +37,7 @@ export default function HowWeWork() {
             <div className="mt-6 overflow-hidden rounded-[24px] sm:mt-8 lg:mt-10">
               <img
                 src={processImage}
+                loading="lazy" 
                 alt="Construction planning and project coordination"
                 className="h-[240px] w-full object-cover sm:h-[320px] lg:h-[360px]"
               />

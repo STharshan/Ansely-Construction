@@ -113,6 +113,7 @@ export default function AgentsGrid({ agents }) {
                   <img
                     src={agent.image}
                     alt={agent.name}
+                    loading="lazy"
                     className="h-[380px] w-full object-cover object-top transition duration-1000 group-hover:scale-105 sm:h-[470px]"
                   />
                 </a>

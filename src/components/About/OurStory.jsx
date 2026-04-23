@@ -19,7 +19,7 @@ const OurStory = () => {
 
   return (
     <div ref={containerRef} className="relative h-auto bg-[var(--color-panel)] lg:h-[800vh]">
-      <div className="relative flex flex-col justify-center py-12 lg:sticky lg:top-0 lg:overflow-hidden lg:py-20">
+      <div className="relative flex flex-col justify-center py-12 lg:sticky lg:top-0 lg:overflow-hidden">
         <div className="mb-12 mx-auto w-full max-w-7xl px-6 md:px-12">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
             <div>
@@ -48,6 +48,7 @@ const OurStory = () => {
                 <img
                   src="https://cdn.prod.website-files.com/693e9d1043906400d3af572d/6942826103443d922712e9ae_2149571922.webp"
                   alt="Modular Home"
+                  loading="lazy"
                   className="h-[300px] w-full object-cover lg:h-[400px]"
                 />
               </div>

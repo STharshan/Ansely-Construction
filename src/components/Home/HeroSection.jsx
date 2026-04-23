@@ -43,6 +43,7 @@ export default function HeroSection() {
                     <img
                       src={promoImage}
                       alt="Modern Sri Lankan Villa"
+                      loading="lazy" 
                       className="h-[190px] w-full object-cover"
                     />
                   </div>

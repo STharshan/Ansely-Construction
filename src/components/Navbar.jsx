@@ -75,7 +75,7 @@ export default function Navbar({ variant = "transparent" }) {
             {/* CTA */}
             <Link
               to="/#contact"
-              className="group hidden items-center gap-2 rounded-lg bg-[var(--color-brand)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--color-brand-hover)] md:inline-flex"
+              className="group hidden items-center gap-2 rounded-lg bg-[var(--color-brand)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--color-brand-hover)] lg:inline-flex"
             >
               Get a Free Consultation
               <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

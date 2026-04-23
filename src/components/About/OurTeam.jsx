@@ -24,7 +24,7 @@ const teamMembers = [
 
 export default function OurTeam() {
   return (
-    <section className="bg-[var(--color-panel)] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section className="bg-[var(--color-panel)] px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1360px]">
         <div className="mx-auto max-w-[700px] text-center">
           <p className="text-xs font-semibold uppercase text-[var(--color-ink-soft)] sm:text-base">
@@ -53,6 +53,7 @@ export default function OurTeam() {
                 <img
                   src={member.image}
                   alt={member.name}
+                  loading="lazy"
                   className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-[1.03] sm:h-[480px] lg:h-[540px]"
                 />
               </div>

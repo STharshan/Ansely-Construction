@@ -65,7 +65,8 @@ export default function WhyChoose() {
               <img
                 src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
                 alt="Custom home built in Sri Lanka by Euro Builders"
-                className="w-full object-contain"
+                loading="lazy" 
+                className="w-full object-contain rounded-xl"
               />
             </div>
 

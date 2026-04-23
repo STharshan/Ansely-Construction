@@ -32,6 +32,7 @@ export default function AgentHero({ profileCard, about, experience }) {
                 <img
                   src={profileCard.image}
                   alt={profileCard.name}
+                  loading="lazy"
                   className="h-[94px] w-[94px] rounded-full object-cover object-center sm:h-[102px] sm:w-[102px]"
                 />
               </div>

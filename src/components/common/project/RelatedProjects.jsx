@@ -58,11 +58,13 @@ export default function RelatedProjects({ relatedProjects }) {
                   <img
                     src={activeProject.image}
                     alt={activeProject.title}
+                    loading="lazy" 
                     className="h-[24rem] w-[76%] object-cover sm:h-[32rem] lg:h-[33.5rem]"
                   />
                   <img
                     src={activeProject.accentImage}
                     alt={`${activeProject.title} alternate view`}
+                    loading="lazy" 
                     className="absolute bottom-[3.75rem] right-0 h-[15rem] w-[62%] object-cover shadow-[0_20px_60px_rgba(0,0,0,0.08)] sm:h-[21rem] lg:h-[22rem]"
                   />
                 </div>

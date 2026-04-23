@@ -95,7 +95,7 @@ export default function Whowebuild() {
 
                   <div className="mt-auto pt-8">
                     <div className="mb-8 h-px w-full bg-[var(--color-border)] transition-colors duration-500 group-hover:bg-white/20" />
-                    <DetailLink text={item.buttonText} href={item.href} />
+                    <DetailLink text={item.buttonText} href="/#contact" />
                   </div>
                 </div>
               </article>

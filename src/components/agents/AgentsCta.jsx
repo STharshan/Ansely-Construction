@@ -82,6 +82,7 @@ export default function AgentsCta() {
           <img
             src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=2200&q=80"
             alt="Luxury modern house"
+            loading="lazy"
             className="h-full w-full object-cover object-center"
           />
         </div>

@@ -93,7 +93,7 @@ export default function About() {
           <div className="grid gap-8 md:grid-cols-[1fr_1fr]">
             <div className="space-y-8">
               <div data-aos="fade-up" className="overflow-hidden rounded-[28px]">
-                <img src={topImage} alt="Curved luxury architecture" className="h-[400px] w-full object-cover" />
+                <img src={topImage} loading="lazy"  alt="Curved luxury architecture" className="h-[400px] w-full object-cover" />
               </div>
               <StatCard count="15+" title="Years in Construction" icon={Layers3} />
               <StatCard count="100+" title="Builds Completed Across Sri Lanka" icon={Home} />
@@ -102,7 +102,7 @@ export default function About() {
             <div className="space-y-8 pt-0 md:pt-10 xl:pt-0">
               <StatCard dark count="15+" title="Years in Real Estate" icon={Layers3} />
               <div data-aos="fade-up" data-aos-delay="200" className="overflow-hidden rounded-[28px]">
-                <img src={bottomImage} alt="Modern apartment tower" className="h-[520px] w-full object-cover sm:h-[645px]" />
+                <img src={bottomImage}  loading="lazy"  alt="Modern apartment tower" className="h-[520px] w-full object-cover sm:h-[645px]" />
               </div>
             </div>
           </div>
