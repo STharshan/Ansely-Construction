@@ -17,7 +17,7 @@ const builderCategories = [
       "No land yet? No problem. We source the right location for you, then manage the full build from design to completion.",
     icon: MapPin,
     buttonText: "Find My Plot",
-    image: "https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=1200&q=80",
     href: "/land-and-build",
   },
   {
@@ -47,7 +47,7 @@ function DetailLink({ text, href }) {
 
 export default function Whowebuild() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-panel)] px-4 py-20 pb-32">
+    <section className="relative overflow-hidden bg-[var(--color-panel)] px-4 py-15 pb-18">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-5xl text-center">
           <div className="inline-flex items-center gap-3 rounded-full border border-[var(--color-border)] bg-white px-5 py-1 text-base font-medium text-[var(--color-ink-soft)] shadow-[0_8px_20px_rgba(0,0,0,0.03)]">

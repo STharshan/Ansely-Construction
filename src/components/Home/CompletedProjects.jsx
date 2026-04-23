@@ -5,7 +5,7 @@ import { completedProjects } from "../../data/project";
 
 const CompletedProjects = () => {
   return (
-    <section className="bg-[var(--color-surface)] py-20">
+    <section className="bg-[var(--color-surface)] py-15">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white px-4 py-2 text-sm">

@@ -32,14 +32,15 @@ export default function WhyChoose() {
   return (
     <section id="whyus" className="bg-[var(--color-panel)] px-4 py-8 md:px-6 md:py-10">
       <div
-        className="relative overflow-hidden rounded-[28px] bg-[var(--color-ink)] px-5 pb-0 pt-12 sm:px-8 md:px-12 md:pt-16 lg:px-16"
+        className="relative overflow-hidden rounded-[28px] bg-[var(--color-ink)] px-5 pb-0 sm:px-8 md:px-12 lg:px-16"
         style={{
           backgroundImage:
             "linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px), radial-gradient(circle at 50% 10%, rgba(156,156,85,0.24), rgba(0,0,0,0.94) 34%, rgba(0,0,0,1) 72%)",
           backgroundSize: "78px 78px, 78px 78px, cover",
         }}
       >
-        <div className="mx-auto max-w-[1360px] p-6">
+        {/* Added py-16 to container to ensure spacing around the centered content */}
+        <div className="mx-auto max-w-[1360px] py-16">
           <div className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white">
               <span className="h-2 w-2 rounded-full bg-[var(--color-brand)]" />
@@ -51,14 +52,16 @@ export default function WhyChoose() {
             </h2>
           </div>
 
-          <div className="mt-14 grid items-end gap-8 lg:mt-16 lg:grid-cols-[320px_1fr_320px] lg:gap-8">
+          {/* Changed items-end to items-center */}
+          <div className="mt-14 grid items-center gap-8 lg:mt-16 lg:grid-cols-[320px_1fr_320px] lg:gap-8">
             <div className="grid gap-6">
               {points.slice(0, 2).map((item) => (
                 <FeatureCard key={item.title} item={item} />
               ))}
             </div>
 
-            <div className="relative mx-auto flex w-full max-w-[600px] items-end justify-center">
+            {/* Image container now centers vertically between card rows */}
+            <div className="relative mx-auto flex w-full max-w-[600px] items-center justify-center">
               <img
                 src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
                 alt="Custom home built in Sri Lanka by Euro Builders"
