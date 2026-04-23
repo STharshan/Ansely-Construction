@@ -16,10 +16,16 @@ function AppLayout() {
     : "transparent";
 
   useEffect(() => {
-    if (!hash) return;
+    if (!hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      return;
+    }
 
     const target = document.querySelector(hash);
-    if (!target) return;
+    if (!target) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      return;
+    }
 
     window.setTimeout(() => {
       target.scrollIntoView({ behavior: "smooth", block: "start" });

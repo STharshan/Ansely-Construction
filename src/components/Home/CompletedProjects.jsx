@@ -1,29 +1,7 @@
 import React from "react";
 import { Check, Phone } from "lucide-react";
-
-const apartments = [
-  {
-    id: 1,
-    title: "Skyline Residency",
-    description: "Working professionals & small family this apartment offer smart.",
-    image: "https://html.awaikenthemes.com/antila/images/apartment-image-1-prime.jpg",
-    features: ["Power Backup for Essentials", "Modern kitchen layout"],
-  },
-  {
-    id: 2,
-    title: "Greenview Homes",
-    description: "Working professionals & small family this apartment offer smart.",
-    image: "https://html.awaikenthemes.com/antila/images/apartment-image-1-prime.jpg",
-    features: ["Power Backup for Essentials", "Modern kitchen layout"],
-  },
-  {
-    id: 3,
-    title: "Prime Living Towers",
-    description: "Working professionals & small family this apartment offer smart.",
-    image: "https://html.awaikenthemes.com/antila/images/apartment-image-1-prime.jpg",
-    features: ["Power Backup for Essentials", "Modern kitchen layout"],
-  },
-];
+import { Link } from "react-router-dom";
+import { completedProjects } from "../../data/project";
 
 const CompletedProjects = () => {
   return (
@@ -41,8 +19,12 @@ const CompletedProjects = () => {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {apartments.map((item) => (
-            <div key={item.id} className="group relative h-[600px] overflow-hidden rounded-3xl">
+          {completedProjects.map((item) => (
+            <Link
+              key={item.id}
+              to={`/projects/${item.slug}`}
+              className="group relative block h-[600px] overflow-hidden rounded-3xl"
+            >
               <img
                 src={item.image}
                 alt={item.title}
@@ -70,7 +52,7 @@ const CompletedProjects = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
