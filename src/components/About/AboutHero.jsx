@@ -5,8 +5,8 @@ const heroImage =
 
 export default function AboutHero() {
   return (
-    <section className="bg-[var(--color-panel)] px-3 pb-3 pt-3 sm:px-4 sm:pb-4 sm:pt-4">
-      <div className="relative overflow-hidden rounded-[28px] bg-[var(--color-ink)] shadow-[0_25px_80px_rgba(7,10,16,0.35)] sm:rounded-[34px]">
+    <section>
+      <div className="relative overflow-hidden bg-[var(--color-ink)] shadow-[0_25px_80px_rgba(7,10,16,0.35)]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -17,15 +17,10 @@ export default function AboutHero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(255,255,255,0.12),transparent_28%)]" />
         <div className="absolute inset-x-0 bottom-0 h-[24%] bg-[linear-gradient(180deg,rgba(7,9,13,0)_0%,rgba(7,9,13,0.78)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-[580px] max-w-[1440px] items-end px-5 pb-10 pt-28 sm:min-h-[660px] sm:px-8 sm:pb-12 md:px-10 lg:min-h-[720px] lg:px-14 lg:pb-16 lg:pt-36 xl:min-h-[760px] xl:px-18">
+        <div className="relative z-10 mx-auto flex max-w-[1440px] items-end px-5 pb-10 pt-28 sm:px-8 sm:pb-12 md:px-10 h-screen lg:px-14 lg:pb-16 lg:pt-36 xl:px-18">
           <div className="w-full max-w-[1180px]">
             <div className="max-w-[920px]">
-              <p className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur-md sm:text-sm">
-                <span className="h-2 w-2 rounded-full bg-[var(--color-brand)]" />
-                About Ansely
-              </p>
-
-              <h1 className="mt-5 max-w-[820px] text-[2.9rem] font-semibold uppercase leading-[0.9] tracking-[-0.07em] text-white sm:text-[4.2rem] md:text-[5.2rem] lg:text-[6.4rem] xl:text-[7rem]">
+              <h1 className="max-w-[820px] -mt-80 text-[2.9rem] font-semibold uppercase leading-[0.9] tracking-[-0.07em] text-white sm:text-[4.2rem] md:text-[5.2rem] ">
                 Built Modular.
                 <br />
                 Built Better.
@@ -35,7 +30,7 @@ export default function AboutHero() {
             <div className="mt-8 grid gap-6 lg:mt-10 lg:grid-cols-[280px_minmax(0,560px)] lg:items-center lg:gap-10">
               <a
                 href="/projects"
-                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[var(--color-brand)] px-6 py-4 text-sm font-semibold uppercase tracking-[0.04em] text-white shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition duration-300 hover:bg-white hover:text-[var(--color-ink)] sm:px-7 sm:py-5 sm:text-base"
+                className="group inline-flex w-fit items-center gap-4 rounded-full bg-[var(--color-brand)] px-6 py-2 text-sm font-semibold uppercase tracking-[0.04em] text-white shadow-[0_14px_30px_rgba(0,0,0,0.28)] transition duration-300 hover:bg-white hover:text-[var(--color-ink)] font-semibold"
               >
                 <span className="relative flex h-7 w-7 items-center justify-center">
                   <span className="absolute h-5 w-5 rounded-full border border-white/35 transition group-hover:border-black/25" />
@@ -44,7 +39,7 @@ export default function AboutHero() {
                 Explore Our Homes
               </a>
 
-              <p className="max-w-[620px] text-base font-medium leading-[1.45] text-white/88 sm:text-xl md:text-2xl lg:text-[2rem] lg:leading-[1.35]">
+              <p className="max-w-[620px] text-base font-medium leading-[1.45] text-white/88 sm:text-xl lg:leading-[1.35]">
                 We create homes that are faster to build, easier to customize,
                 and designed to support modern living.
               </p>

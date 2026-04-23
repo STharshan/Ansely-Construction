@@ -124,7 +124,7 @@ export default function HowWeWork() {
 
             <div className="mt-9 flex justify-center sm:mt-10">
               <a
-                href="/contact"
+                href="/#contact"
                 className="inline-flex items-center gap-3 rounded-full bg-[var(--color-brand)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-[0_14px_28px_rgba(156,156,85,0.28)] transition hover:bg-[var(--color-brand-hover)]"
               >
                 Start Your Build Today

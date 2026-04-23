@@ -102,16 +102,17 @@ export default function Whowebuild() {
             );
           })}
         </div>
-
-        <div className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-3 rounded-full border border-[var(--color-border)] bg-white/90 px-6 py-3 shadow-xl backdrop-blur-md transition-all hover:scale-[1.02] sm:flex-row">
-          <span className="rounded-full bg-[var(--color-brand)] px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-white">
+        <div className="fixed bottom-6 left-4 right-4 z-50 mx-auto flex max-w-fit -translate-y-0 items-center justify-center gap-3 rounded-2xl border border-[var(--color-border)] bg-white/90 px-5 py-3 shadow-xl backdrop-blur-md transition-all hover:scale-[1.02] sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:rounded-full sm:px-6">
+          <span className="shrink-0 rounded-full bg-[var(--color-brand)] px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white sm:text-xs">
             Free
           </span>
-          <p className="whitespace-nowrap text-sm font-medium text-[var(--color-ink-soft)]">
-            Ready to get started? -
+          <p className="text-center text-xs font-medium text-[var(--color-ink-soft)] sm:text-sm md:whitespace-nowrap">
+            Ready to get started?
+            <span className="hidden sm:inline"> — </span>
+            <br className="sm:hidden" />
             <a
-              href="/contact"
-              className="ml-2 font-bold text-[var(--color-brand-hover)] underline decoration-[color:rgba(156,156,85,0.4)] underline-offset-4 hover:decoration-[var(--color-brand-hover)]"
+              href="/#contact"
+              className="font-bold text-[var(--color-brand-hover)] underline decoration-[color:rgba(156,156,85,0.4)] underline-offset-4 hover:decoration-[var(--color-brand-hover)]"
             >
               Get Your Free Consultation Today.
             </a>

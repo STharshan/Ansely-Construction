@@ -59,7 +59,7 @@ const CompletedProjects = () => {
         <div className="mt-14 flex flex-wrap items-center justify-center gap-4 text-center">
           <div className="flex -space-x-2">
             <img
-              src="images/author-1.jpg"
+              src="/author-1.jpg"
               alt="author"
               className="h-10 w-10 rounded-full border-2 border-white"
             />
@@ -70,7 +70,7 @@ const CompletedProjects = () => {
 
           <p className="text-lg">
             Let's make something great work together.{" "}
-            <a href="/contact" className="font-semibold text-[var(--color-brand)] underline">
+            <a href="/#contact" className="font-semibold text-[var(--color-brand)] underline">
               Get Free Quote.
             </a>
           </p>
